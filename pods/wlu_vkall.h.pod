@@ -1,0 +1,179 @@
+WLU Vulkan All Header Man Page
+
+=head1 BRIEF DESCRIPTION
+
+Wayland Lucurious Vulkan All Header
+
+=head1 SYNOPSIS
+
+=over 4
+
+=item B<#include <wlu/vkall.h>>
+
+=item typedef B<struct swap_chain_buffers> {
+
+=over
+
+=item B<VkImage> image;
+
+=item B<VkImageView> view;
+
+=back
+
+=item } B<swap_chain_buffers>;
+
+=item "\n"
+
+=item typedef B<struct queue_family_indices> {
+
+=over
+
+=item B<uint32_t> graphics_family;
+
+=item B<uint32_t> present_family;
+
+=back
+
+=item } B<queue_family_indices>;
+
+=item "\n"
+
+=item typedef B<struct vkcomp> {
+
+=over
+
+=item B<VkInstance> instance;
+
+=item B<VkSurfaceKHR> surface;
+
+=item B<VkLayerProperties> *vk_layer_props;
+
+=item B<uint32_t> vk_layer_count;
+
+=item B<VkExtensionProperties> *ep_instance_props;
+
+=item B<uint32_t> ep_instance_count;
+
+=item B<VkExtensionProperties> *ep_device_props;
+
+=item B<tuint32_t> ep_device_count;
+
+=item B<VkPhysicalDeviceProperties> device_properties;
+
+=item B<VkPhysicalDeviceFeatures> device_features;
+
+=item B<VkPhysicalDeviceMemoryProperties> memory_properties;
+
+=item B<VkPhysicalDevice> physical_device;
+
+=item B<VkDeviceQueueCreateInfo> *queue_create_infos;
+
+=item B<VkQueueFamilyProperties> *queue_families;
+
+=item B<uint32_t> queue_family_count;
+
+=item B<queue_family_indices> indices;
+
+=item B<VkDevice> device;
+
+=item B<VkQueue> graphics_queue;
+
+=item B<swap_chain_buffers> *sc_buffs;
+
+=item B<VkSwapchainKHR> swap_chain;
+
+=item B<VkFormat> sc_img_fmt;
+
+=item B<VkExtent2D> sc_extent;
+
+=item B<uint32_t> img_count;
+
+=back
+
+=item } B<vkcomp>;
+
+=item "\n"
+
+=item vkcomp B<*wlu_init_vk()>;
+
+=item VkResult B<wlu_set_global_layers(vkcomp> *app);
+
+=item VkResult B<wlu_create_instance(vkcomp> *appB<, char > *app_name B<, char> *engine_name);
+
+=item VkResult B<wlu_enumerate_devices(vkcomp> *app B<, VkQueueFlagBits> vkqfbits B<, VkPhysicalDeviceType> vkpdtype);
+
+=item VkResult B<wlu_set_logical_device(vkcomp> *app);
+
+=item VkResult B<wlu_vkconnect_surfaceKHR(vkcomp> *app B<, void> *wl_display B<, void> *wl_surface);
+
+=item VkResult B<wlu_create_swap_chain(vkcomp> *app);
+
+=item VkResult B<wlu_create_img_views(vkcomp> *app B<, wlu_image> type);
+
+=item VkResult B<wlu_create_graphics_pipeline(vkcomp> *app);
+
+=item void B<wlu_freeup_vk(void> *data);
+
+=back
+
+=head1 DESCRIPTION
+
+=over 2
+
+=item B<struct swap_chain_buffers>
+
+=over 4
+
+=item B<VkImage image>
+
+VkImage is the acutal image object that represents multidimensional (up to 3) arrays of data.
+Data of which has various purposes (e.g. attachments, textures) and can be utilized by binding images
+to a graphics or compute pipeline via descriptor sets.
+
+=item B<VkImageView view>
+
+VkImage objects are not accessed by the shaders pipeline directly. So, VkImageViews that represent
+ranges of image subresources (The number of mipmap levels and array layers) and metadata are used for
+said purpose. Views must contain images of the same type and must have valid subsets of image subresources.
+
+=back
+
+=item B<struct queue_family_indices>
+
+Almost every operation in Vulkan, anything from drawing to uploading textures, requires
+commands to be submitted to a queue. Different queue families produce different types of
+queues and each queue family allows for a subset of commands.
+
+=over 4
+
+=item B<uint32_t graphics_family>
+
+Is equal to the queue family index that has support for the graphics bit that is set in wlu_enumerate_devices(3)
+(eg. VK_QUEUE_GRAPHICS_BIT). For more info visit I<https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkQueueFlagBits.html>
+
+=item B<uint32_t present_family>
+
+Is equal to the queue family index that allows a device to present images to a surface.
+For more info visit I<https://khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html>
+
+=back
+
+=item B<struct vkcomp>
+
+=back
+
+=head1 EXIT STATUS
+
+cdspeed returns  a  zero  exist  status  if it succeeds to
+change to set the maximum speed of the  cdrom  drive.  Non
+zero is returned in case of failure.
+
+=head1 AUTHOR
+
+Vincent Davis Jr.
+
+=head1 SEE ALSO
+
+wlu_init_wc(3) wlu_set_global_layers(3) wlu_create_instance(3) wlu_vkconnect_surfaceKHR(3)
+wlu_enumerate_devices(3) wlu_set_logical_device(3) wlu_create_swap_chain(3)
+wlu_create_img_views(3) wlu_freeup_vk(3) wlu_image(3)
