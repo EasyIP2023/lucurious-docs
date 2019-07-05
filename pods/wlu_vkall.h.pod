@@ -6,9 +6,9 @@ Wayland Lucurious Vulkan All Header
 
 =head1 SYNOPSIS
 
-=over 4
+B<#include> <wlu/vkall.h>
 
-=item B<#include <wlu/vkall.h>>
+=over 4
 
 =item typedef B<struct swap_chain_buffers> {
 
@@ -20,9 +20,7 @@ Wayland Lucurious Vulkan All Header
 
 =back
 
-=item } B<swap_chain_buffers>;
-
-=item "\n"
+=item } B<swap_chain_buffers> ;
 
 =item typedef B<struct queue_family_indices> {
 
@@ -34,9 +32,7 @@ Wayland Lucurious Vulkan All Header
 
 =back
 
-=item } B<queue_family_indices>;
-
-=item "\n"
+=item } B<queue_family_indices> ;
 
 =item typedef B<struct vkcomp> {
 
@@ -118,7 +114,7 @@ Wayland Lucurious Vulkan All Header
 
 =head1 DESCRIPTION
 
-=over 2
+=over 4
 
 =item B<struct swap_chain_buffers>
 
@@ -164,9 +160,8 @@ For more info visit I<https://khronos.org/registry/vulkan/specs/1.1-extensions/m
 
 =head1 EXIT STATUS
 
-cdspeed returns  a  zero  exist  status  if it succeeds to
-change to set the maximum speed of the  cdrom  drive.  Non
-zero is returned in case of failure.
+Upon success or failure each VkResult function returns one of vulkans VkResult enum codes located here.
+I<https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkResult.html>
 
 =head1 AUTHOR
 
