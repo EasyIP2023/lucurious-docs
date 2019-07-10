@@ -1,20 +1,31 @@
 # Lucurious Docs
 Lucurious is largely documented through comments in the code and man pages. When documenting please ensure that the file name starts with label wlu_*.
 
-**To generate single man page file by hand**
+# Installation
 
+```bash
+mkdir -v build
+meson build
+ninja install -C build
+
+# Encase of PolicyKit daemon errors
+pkttyagent -p $(echo $$) | pkexec ninja install -C $(pwd)/build/
+```
+
+# Contribution
+
+**To generate single man page file by hand**
 ```bash
 mkdir -v build
 pod2man <filename>.pod > build/wlu_<filename>.<man page #>
-groff -Tascii -man build/wlu_*
-# OR!!!!
-man ./build/wlu_*
 ```
-
 **To Generate multiple man pages**
 ```bash
 mkdir -v build
-make
+meson build/
+```
+**Testing**
+```bash
 groff -Tascii -man build/wlu_*
 # OR!!!!
 man ./build/wlu_*
