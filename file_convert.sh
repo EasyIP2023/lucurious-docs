@@ -6,6 +6,7 @@ convert_file() {
   sed -i "s/${NEW_FILE} 1/${NEW_FILE} ${2}/g" build/$1.$2
 }
 
+convert_file "lucur" 1
 convert_file "wlu_vkall.h" 3
 convert_file "wlu_freeup_vk" 3
 convert_file "wlu_init_vk" 3

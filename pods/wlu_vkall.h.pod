@@ -161,13 +161,13 @@ queues and each queue family allows for a subset of commands.
 
 =item B<uint32_t graphics_family>
 
-Is equal to the queue family index that has support for the graphics bit that is set in wlu_enumerate_devices(3)
-(eg. VK_QUEUE_GRAPHICS_BIT). For more info visit I<https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkQueueFlagBits.html>.
+Is equal to the queue family index that has support for whatever VkQueueFlagBits that are set in wlu_enumerate_devices(3)
+(eg. VK_QUEUE_GRAPHICS_BIT). For more info visit I<https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkQueueFlagBits.html>
 
 =item B<uint32_t present_family>
 
 Is equal to the queue family index that allows a device to present images to a surface.
-For more info visit I<https://khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html>.
+For more info visit I<https://khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html>
 
 =back
 
@@ -177,8 +177,9 @@ For more info visit I<https://khronos.org/registry/vulkan/specs/1.1-extensions/m
 
 =item B<VkInstance> instance
 
-The instance variable is used to set a VkInstance. A VkInstance is the way your
-liblucurious.so connects to the vulkan api.
+The instance variable is used to set up devices.
+It'll deal with enumerating VkPhysicalDevices and querying their properties, etc...
+A VkInstance is the way your liblucurious.so connects to the vulkan api.
 
 =item B<VkSurfaceKHR> surface
 
@@ -192,24 +193,23 @@ installed with the vulkan sdk.
 
 =item B<uint32_t> vk_layer_count
 
-The vk_layer_count variable keeps track of the amount of validation layer are available
-To print a list of available validation layers type B<lucur --pgvl> in your terminal.
+The vk_layer_count variable keeps track of the amount of validation layer are available.
+For more information go to lucur(1).
 
 =item B<VkExtensionProperties> *ep_instance_props
 
 The ep_instance_props pointer keeps track of all available instance extensions.
-To print a list of device instance extensions type B<lucur --pie> in your terminal.
+For more information go to lucur(1).
 
 =item B<uint32_t> ep_instance_count
 
 The ep_instance_count variable keeps track of the amount of instance extensions
-are available for a device
+are available for a device.
 
 =item B<VkExtensionProperties> *ep_device_props
 
 The ep_device_props pointer keeps track of all available device extensions.
-To print a list of device extensions type B<lucur --pde VK_QUEUE_GRAPHICS_BIT,1>
-in your terminal
+For more information go to lucur(1).
 
 =item B<uint32_t> ep_device_count
 
@@ -220,7 +220,7 @@ are available.
 
 Used to store a phyical device properties like the name, type
 and supported Vulkan version. This variable is utilized in the
-is_device_suitable() function
+is_device_suitable() function.
 
 =item B<VkPhysicalDeviceFeatures> device_features
 
@@ -239,12 +239,12 @@ of physical devices this will be set to a device that fits the api's needs.
 =item B<VkDeviceQueueCreateInfo> *queue_create_infos
 
 The queue_create_infos variable is a pointer to the struct VkDeviceQueueCreateInfo. It is
-set in wlu_set_logical_device(3)
+set in wlu_set_logical_device(3).
 
 =item B<VkQueueFamilyProperties> *queue_families
 
 The queue_families variable is a pointer to the struct VkQueueFamilyProperties. It is
-set in the find_queue_families()
+set in the find_queue_families().
 
 =item B<uint32_t> queue_family_count
 
@@ -257,14 +257,14 @@ Is a variable to the B<queue_family_indices struct>.
 
 =item B<VkDevice> device
 
-The device variable is used to store a logical device information.
+The device variable is used to deal with Vulkan rendering systems.
 This is the api's way of interfacing with a physical device.
 The variable is set in wlu_set_logical_device(3).
 
 =item B<VkQueue> graphics_queue
 
 Queues are automatically created with the logical device. This is the
-queue handle to interface with them
+queue handle to interface with them.
 
 =item B<swap_chain_buffers> *sc_buffs
 
@@ -292,7 +292,7 @@ images a particular logical device swap chain can handle.
 
 =back
 
-=head1 EXIT STATUS
+=head1 RETURN VALUES
 
 Upon success or failure each VkResult function returns one of vulkans VkResult enum codes located here.
 I<https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkResult.html>

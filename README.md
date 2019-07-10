@@ -20,7 +20,7 @@ groff -Tascii -man build/wlu_*
 man ./build/wlu_*
 ```
 
-I plan on leaving this particular make file as simple as possible.
+I plan on leaving this particular Makefile as simple as possible.
 
 ### References
 * [Perl Documentation Format](http://linuxfocus.org/English/November2003/article309.shtml)

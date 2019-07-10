@@ -46,7 +46,7 @@ B<Program source>
 
 =back
 
-=head1 SEE_ALSO
+=head1 SEE ALSO
 
 wlu_init_vk(3)
 
