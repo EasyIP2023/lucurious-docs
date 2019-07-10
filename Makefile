@@ -1,12 +1,12 @@
 
-all: create_man seds
+all: create_man seds_common
 
 create_man:
-	pod2man pods/wlu_vkall.h.pod > build/wlu_vkall.h.3
+	bash file_convert.sh
 
-seds:
+seds_common:
 	sed -i 's/User Contributed Perl Documentation/Lucurious Api Documentation/g' build/*
-	sed -i 's/perl v5.30.0/lucurious api 1.0.0/g' build/*
+	sed -i 's/perl v5.30.0/Lucurious Labs Docs/g' build/*
 
 clean:
 	$(RM) build/*

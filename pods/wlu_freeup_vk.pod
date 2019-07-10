@@ -1,0 +1,55 @@
+
+=head1 NAME
+
+wlu_freeup_vk - Frees vkcomp memory
+
+=head1 SYNOPSIS
+
+=over
+
+=item B<#include> <wlu/vkall.h>
+
+=item
+
+=item vkcomp B<wlu_freeup_vk(vkcomp> *app)
+
+=back
+
+=head1 DESCRIPTION
+
+The wlu_freeup_vk() function free's up any memory if allocate that belongs to the vkcomp
+pointer variable viewable in wlu_vkall.h(3)
+
+=head1 EXAMPLE
+
+B<Program source>
+
+=over
+
+=item B<#include> <wlu/vkall.h>
+
+=item
+
+=item int main() {
+
+=over
+
+=item vkcomp *app = wlu_init_vk();
+
+=item wlu_freeup_vk(app);
+
+=item return 0;
+
+=back
+
+=item }
+
+=back
+
+=head1 SEE_ALSO
+
+wlu_init_vk(3)
+
+=head1 AUTHOR
+
+Vincent Davis Jr.

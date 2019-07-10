@@ -1,0 +1,54 @@
+
+=head1 NAME
+
+wlu_init_vk - This will return a pointer the vkcomp struct
+
+=head1 SYNOPSIS
+
+=over
+
+=item B<#include> <wlu/vkall.h>
+
+=item
+
+=item vkcomp B<*wlu_init_vk()>
+
+=back
+
+=head1 DESCRIPTION
+
+This function returns a pointer to a vkcomp struct with variables viewable in wlu_vkall.h(3)
+
+=head1 EXAMPLE
+
+B<Program source>
+
+=over
+
+=item B<#include> <wlu/vkall.h>
+
+=item
+
+=item int main() {
+
+=over
+
+=item vkcomp *app = wlu_init_vk();
+
+=item wlu_freeup_vk(app);
+
+=item return 0;
+
+=back
+
+=item }
+
+=back
+
+=head1 SEE_ALSO
+
+wlu_freeup_vk(3)
+
+=head1 AUTHOR
+
+Vincent Davis Jr.

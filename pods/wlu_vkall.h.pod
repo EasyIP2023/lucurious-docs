@@ -1,4 +1,3 @@
-WLU Vulkan All Header Man Page
 
 =head1 BRIEF DESCRIPTION
 
@@ -8,7 +7,7 @@ Wayland Lucurious Vulkan All Header
 
 B<#include> <wlu/vkall.h>
 
-=over 4
+=over
 
 =item typedef B<struct swap_chain_buffers> {
 
@@ -22,6 +21,8 @@ B<#include> <wlu/vkall.h>
 
 =item } B<swap_chain_buffers> ;
 
+=item
+
 =item typedef B<struct queue_family_indices> {
 
 =over
@@ -34,6 +35,8 @@ B<#include> <wlu/vkall.h>
 
 =item } B<queue_family_indices> ;
 
+=item
+
 =item typedef B<struct vkcomp> {
 
 =over
@@ -42,17 +45,25 @@ B<#include> <wlu/vkall.h>
 
 =item B<VkSurfaceKHR> surface;
 
+=item
+
 =item B<VkLayerProperties> *vk_layer_props;
 
 =item B<uint32_t> vk_layer_count;
+
+=item
 
 =item B<VkExtensionProperties> *ep_instance_props;
 
 =item B<uint32_t> ep_instance_count;
 
+=item
+
 =item B<VkExtensionProperties> *ep_device_props;
 
-=item B<tuint32_t> ep_device_count;
+=item B<uint32_t> ep_device_count;
+
+=item
 
 =item B<VkPhysicalDeviceProperties> device_properties;
 
@@ -62,6 +73,8 @@ B<#include> <wlu/vkall.h>
 
 =item B<VkPhysicalDevice> physical_device;
 
+=item
+
 =item B<VkDeviceQueueCreateInfo> *queue_create_infos;
 
 =item B<VkQueueFamilyProperties> *queue_families;
@@ -70,9 +83,13 @@ B<#include> <wlu/vkall.h>
 
 =item B<queue_family_indices> indices;
 
+=item
+
 =item B<VkDevice> device;
 
 =item B<VkQueue> graphics_queue;
+
+=item
 
 =item B<swap_chain_buffers> *sc_buffs;
 
@@ -86,9 +103,9 @@ B<#include> <wlu/vkall.h>
 
 =back
 
-=item } B<vkcomp>;
+=item } B<vkcomp> ;
 
-=item "\n"
+=item
 
 =item vkcomp B<*wlu_init_vk()>;
 
@@ -114,11 +131,11 @@ B<#include> <wlu/vkall.h>
 
 =head1 DESCRIPTION
 
-=over 4
+=over
 
 =item B<struct swap_chain_buffers>
 
-=over 4
+=over
 
 =item B<VkImage image>
 
@@ -140,21 +157,138 @@ Almost every operation in Vulkan, anything from drawing to uploading textures, r
 commands to be submitted to a queue. Different queue families produce different types of
 queues and each queue family allows for a subset of commands.
 
-=over 4
+=over
 
 =item B<uint32_t graphics_family>
 
 Is equal to the queue family index that has support for the graphics bit that is set in wlu_enumerate_devices(3)
-(eg. VK_QUEUE_GRAPHICS_BIT). For more info visit I<https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkQueueFlagBits.html>
+(eg. VK_QUEUE_GRAPHICS_BIT). For more info visit I<https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkQueueFlagBits.html>.
 
 =item B<uint32_t present_family>
 
 Is equal to the queue family index that allows a device to present images to a surface.
-For more info visit I<https://khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html>
+For more info visit I<https://khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html>.
 
 =back
 
 =item B<struct vkcomp>
+
+=over
+
+=item B<VkInstance> instance
+
+The instance variable is used to set a VkInstance. A VkInstance is the way your
+liblucurious.so connects to the vulkan api.
+
+=item B<VkSurfaceKHR> surface
+
+The surface variable represents an abstract type of surface to present rendered images to.
+Also used to destroy VkSurfaceKHR objects.
+
+=item B<VkLayerProperties> *vk_layer_props
+
+The vk_layer_props pointer holdes all validation layers extensions that comes
+installed with the vulkan sdk.
+
+=item B<uint32_t> vk_layer_count
+
+The vk_layer_count variable keeps track of the amount of validation layer are available
+To print a list of available validation layers type B<lucur --pgvl> in your terminal.
+
+=item B<VkExtensionProperties> *ep_instance_props
+
+The ep_instance_props pointer keeps track of all available instance extensions.
+To print a list of device instance extensions type B<lucur --pie> in your terminal.
+
+=item B<uint32_t> ep_instance_count
+
+The ep_instance_count variable keeps track of the amount of instance extensions
+are available for a device
+
+=item B<VkExtensionProperties> *ep_device_props
+
+The ep_device_props pointer keeps track of all available device extensions.
+To print a list of device extensions type B<lucur --pde VK_QUEUE_GRAPHICS_BIT,1>
+in your terminal
+
+=item B<uint32_t> ep_device_count
+
+The ep_device_count variable keeps track of the amount of device extensions
+are available.
+
+=item B<VkPhysicalDeviceProperties> device_properties
+
+Used to store a phyical device properties like the name, type
+and supported Vulkan version. This variable is utilized in the
+is_device_suitable() function
+
+=item B<VkPhysicalDeviceFeatures> device_features
+
+Used to store a physical device features like geometryShader. This variable
+is utilized in the creation of a logical device in function wlu_set_logical_device(3).
+
+=item B<VkPhysicalDeviceMemoryProperties> memory_properties
+
+Current not used for anything in the API.
+
+=item B<VkPhysicalDevice> physical_device
+
+This is set in wlu_enumerate_devices(3) after cycling through a list
+of physical devices this will be set to a device that fits the api's needs.
+
+=item B<VkDeviceQueueCreateInfo> *queue_create_infos
+
+The queue_create_infos variable is a pointer to the struct VkDeviceQueueCreateInfo. It is
+set in wlu_set_logical_device(3)
+
+=item B<VkQueueFamilyProperties> *queue_families
+
+The queue_families variable is a pointer to the struct VkQueueFamilyProperties. It is
+set in the find_queue_families()
+
+=item B<uint32_t> queue_family_count
+
+The queue_family_count variable is used to store the amount of queue families
+a phyical device can have.
+
+=item B<queue_family_indices> indices
+
+Is a variable to the B<queue_family_indices struct>.
+
+=item B<VkDevice> device
+
+The device variable is used to store a logical device information.
+This is the api's way of interfacing with a physical device.
+The variable is set in wlu_set_logical_device(3).
+
+=item B<VkQueue> graphics_queue
+
+Queues are automatically created with the logical device. This is the
+queue handle to interface with them
+
+=item B<swap_chain_buffers> *sc_buffs
+
+The sc_buffs variable is a pointer to the B<swap_chain_buffers struct>.
+
+=item B<VkSwapchainKHR> swap_chain
+
+The swap_chain variable is set in wlu_create_swap_chain(3).
+
+=item B<VkFormat> sc_img_fmt
+
+The sc_img_fmt variable stores the surface format return by choose_swap_surface_format().
+
+=item B<VkExtent2D> sc_extent
+
+The sc_extent variable stores the resolution returned by choose_swap_extent() for
+a particular surface which is most likely 1080p or 1920x1080.
+
+=item B<uint32_t> img_count
+
+The img_count variable is updated in wlu_create_swap_chain(3). It represents the amount
+images a particular logical device swap chain can handle.
+
+=back
 
 =back
 

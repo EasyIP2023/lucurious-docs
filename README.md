@@ -5,7 +5,7 @@ Lucurious is largely documented through comments in the code and man pages. When
 
 ```bash
 mkdir -v build
-pod2man <filename>.pod > build/<filename>.<man page #>
+pod2man <filename>.pod > build/wlu_<filename>.<man page #>
 groff -Tascii -man build/wlu_*
 # OR!!!!
 man ./build/wlu_*
