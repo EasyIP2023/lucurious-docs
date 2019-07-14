@@ -12,6 +12,18 @@ ninja install -C build
 pkttyagent -p $(echo $$) | pkexec ninja install -C $(pwd)/build/
 ```
 
+# Usage
+
+```bash
+man 7 vkall
+```
+```bash
+man 1 lucur
+```
+```bash
+man 3 wlu_*
+```
+
 # Contribution
 
 **To generate single man page file by hand**
@@ -30,8 +42,6 @@ groff -Tascii -man build/wlu_*
 # OR!!!!
 man ./build/wlu_*
 ```
-
-I plan on leaving this particular Makefile as simple as possible.
 
 ### References
 * [Perl Documentation Format](http://linuxfocus.org/English/November2003/article309.shtml)

@@ -11,10 +11,9 @@ project(
 	],
 )
 
-
 run_command('file_convert.sh')
 
 install_man('build/lucur.1')
 install_man('build/wlu_freeup_vk.3')
 install_man('build/wlu_init_vk.3')
-install_man('build/wlu_vkall.h.3')
+install_man('build/vkall.7')
