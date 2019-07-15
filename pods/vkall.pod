@@ -119,11 +119,31 @@ B<#include> <wlu/vkall.h>
 
 =item VkResult B<wlu_vkconnect_surfaceKHR(vkcomp> *app B<, void> *wl_display B<, void> *wl_surface);
 
+=item VkSurfaceCapabilitiesKHR B<wlu_q_device_capabilities(vkcomp> *app);
+
+=item VkSurfaceFormatKHR B<wlu_choose_swap_surface_format(vkcomp> *appB<, VkFormat> formatB<, VkColorSpaceKHR> colorSpace);
+
+=item VkPresentModeKHR B<wlu_choose_swap_present_mode(vkcomp> *app);
+
+=item VkExtent2D B<wlu_choose_swap_extent(VkSurfaceCapabilitiesKHR> capabilities);
+
+=item VkResult B<wlu_create_swap_chain(vkcomp> *appB<, VkSurfaceCapabilitiesKHR> capabilitiesB<,>
+
+=over
+
+=over
+
+=item B<VkSurfaceFormatKHR> surface_fmtB<, VkPresentModeKHR> pres_modeB<, VkExtent2D> extent);
+
+=back
+
+=back
+
 =item VkResult B<wlu_create_swap_chain(vkcomp> *app);
 
 =item VkResult B<wlu_create_img_views(vkcomp> *app B<, wlu_image> type);
 
-=item VkResult B<wlu_create_graphics_pipeline(vkcomp> *app);
+=item VkResult B<wlu_create_gp(vkcomp> *appB<, uint32_t> num_argsB<, ...>);
 
 =item void B<wlu_freeup_vk(void> *data);
 
@@ -276,11 +296,11 @@ The swap_chain variable is set in wlu_create_swap_chain(3).
 
 =item B<VkFormat> sc_img_fmt
 
-The sc_img_fmt variable stores the surface format return by choose_swap_surface_format().
+The sc_img_fmt variable stores the surface format return by wlu_choose_swap_surface_format(3).
 
 =item B<VkExtent2D> sc_extent
 
-The sc_extent variable stores the resolution returned by choose_swap_extent() for
+The sc_extent variable stores the resolution returned by wlu_choose_swap_extent(31) for
 a particular surface which is most likely 1080p or 1920x1080.
 
 =item B<uint32_t> img_count
@@ -303,6 +323,7 @@ Vincent Davis Jr.
 
 =head1 SEE ALSO
 
-wlu_init_wc(3) wlu_set_global_layers(3) wlu_create_instance(3) wlu_vkconnect_surfaceKHR(3)
-wlu_enumerate_devices(3) wlu_set_logical_device(3) wlu_create_swap_chain(3)
-wlu_create_img_views(3) wlu_freeup_vk(3) wlu_image(3)
+wlu_init_vk(3) wlu_set_global_layers(3) wlu_create_instance(3) wlu_enumerate_devices(3)
+wlu_set_logical_device(3) wlu_vkconnect_surfaceKHR(3) wlu_q_device_capabilities(3)
+wlu_choose_swap_surface_format(3) wlu_choose_swap_present_mode(3) wlu_choose_swap_extent(3)
+wlu_create_swap_chain(3) wlu_create_img_views(3) wlu_create_gp(3) wlu_freeup_vk(3)
