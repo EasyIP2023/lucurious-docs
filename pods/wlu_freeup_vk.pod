@@ -18,7 +18,7 @@ wlu_freeup_vk - Frees vkcomp memory
 =head1 DESCRIPTION
 
 The wlu_freeup_vk() function free's up any memory if allocate that belongs to the vkcomp
-pointer variable viewable in wlu_vkall.h(3)
+pointer variable viewable in wlu_vkall.h(3). It B<MUST> be called before wlu_freeup_wc(3).
 
 =head1 EXAMPLE
 
