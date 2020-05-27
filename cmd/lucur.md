@@ -3,7 +3,8 @@
 lucur - liblucurious command line tool
 
 ## SYNOPSIS
-**lucur** [options] 
+**lucur** [options]
+
 **lucur** --pde VK_QUEUE_GRAPHICS_BIT 
 
 ## DESCRIPTION
