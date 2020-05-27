@@ -1,3 +1,5 @@
+<a href="https://easyip2023.github.io/lucurious-docs/" class="button btn btn-success btn-lg">Main Page</a>
+
 # Lucur
 
 lucur - liblucurious command line tool
