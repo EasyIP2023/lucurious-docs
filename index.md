@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](#license)
 
 
-These documents are not official in any way, form, or capacity. I initially starting thinking of how I wanted to implement February of 2019. 
+These documents are not official in any way, form, or capacity. I initially started to think of how I wanted to implement lucurious February of 2019. 
 I was watching the t.v series The Expanse and was looking at how cool all of those user interfaces looked. I was like wow I've seen this done before 
 in video games and in web browsers why not as an entire compositor. After over a year of programming and thinking it is now an **easy to use** library 
 for building highly sophisticated and advanced Vulkan DRM renderers that work directly with KMS. These renderers allow for easy creation of interactable 
