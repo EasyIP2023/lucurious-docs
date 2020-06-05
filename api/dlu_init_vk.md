@@ -15,7 +15,7 @@ vkcomp **dlu_init_vk(vkcomp** *app)
 
 ## DESCRIPTION
 
-This function returns a pointer to a vkcomp struct whose members are 
+This function returns a pointer to a vkcomp (vulkan compositor) structure whose members are
 viewable here [vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp).
 
 ## EXAMPLE
@@ -39,6 +39,5 @@ int main() {
 
 dlu_freeup_vk(3)
 
-## AUTHOR
-
+## Author
 Vincent Davis Jr.

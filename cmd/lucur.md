@@ -5,9 +5,9 @@
 lucur - liblucurious command line tool
 
 ## SYNOPSIS
-**lucur** [options]
+&nbsp;&nbsp;&nbsp;&nbsp;**lucur** [options]
 
-**lucur** --pde VK_QUEUE_GRAPHICS_BIT 
+&nbsp;&nbsp;&nbsp;&nbsp;**lucur** --pde VK_QUEUE_GRAPHICS_BIT
 
 ## DESCRIPTION
 
@@ -15,4 +15,5 @@ The **lucur** command line tool is used to assist in the construction of single 
 
 ## OPTIONS
 
-
+## Author
+Vincent Davis Jr.
