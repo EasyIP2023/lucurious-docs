@@ -7,4 +7,4 @@ I added them to limit the amount of lines of C code one has to write. Whenever t
 to the end of the function call, that function is a wrapper around a Vulkan CreateInfo Structure.
 
 ## Author
-Vincent Davis Jr. <vincedav2495@gmai.com>
+Vincent Davis Jr.
