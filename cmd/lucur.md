@@ -27,12 +27,12 @@ These layers are automatically enabled by the repective vulkan functions and wil
 Prints a list of all instance level vulkan external extensions for a given systems. Basically instance extensions
 allow developers to describe how a device is setup. It also enables the ability to utilize extension related vulkan function calls.
 
-**-d, &mdash;&mdash;pde** [<VkPhysicalDeviceType>](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceType.html)
+**-d, &mdash;&mdash;pde** [VkPhysicalDeviceType](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceType.html)
 
 Prints a list of all physical device level vulkan external extensions for a given system. Basically device extensions
 allow developers to describe what a particular device does. It also enables the ability to utilize extension related vulkan function calls.
 
-&nbsp;&nbsp;&nbsp;&nbsp;**&mdash;&mdash;pdp** [<VkPhysicalDeviceType>](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceType.html)
+&nbsp;&nbsp;&nbsp;&nbsp;**&mdash;&mdash;pdp** [VkPhysicalDeviceType](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceType.html)
 
 Print display devices list
 

@@ -38,8 +38,8 @@ typedef struct _dlu_otma_mems {
 * **dba_cnt**: Double array count. Specifies the amount of bytes of type double to preallocate.
 * **vkcomp_cnt**: Vulkan compositor structure count. Specifies the amount bytes of type vkcomp to preallocate. This will most likely always be one.
 * **vkext_props_cnt**: Vulkan extension properties count. Specifies the amount of bytes need to allocate for vulkan handle VkExtensionProperties.
-* **desc_cnt**: Descriptor count. Specifies the amount of bytes need to preallocate for vulkan handles VkDescriptorSet's and VkDescriptorSetLayout's.
-* **gp_cnt**: Graphics pipelines count. Specifies the amount of VkPipeline one wants to allocate per struct gp_data.
+* **desc_cnt**: Descriptor count. Specifies the amount of bytes need to preallocating vulkan handles VkDescriptorSet and VkDescriptorSetLayout.
+* **gp_cnt**: Graphics pipelines count. Specifies the amount of VkPipeline handles one wants to allocate per (**struct _gp_data**).
 * **si_cnt**: Swap chain image count. Specifies the the exact amount of VkImage, VkImageView, VkFramebuffer, VkFence, VkSemaphore handles to preallocate.
 * **scd_cnt**: Swap chain data count. Specifies the amount of (**struct _sc_data**) bytes needed with respective information to allocate. So if only one swap 
 chain with respective data is needed during program execution only allocate one. 
@@ -55,7 +55,7 @@ VkDescriptorPool, VkDescriptorSetLayout, VkDescriptorSet handles to allocate.
 VkImage, VkImageView, VkDeviceMemory, VkSampler handles to allocate.
 * **dis_cnt**: Display data count. More information later
 * **drmc_cnt**: dlu_drm_core structure count. Specifies the amount of (**dlu_drm_core**) bytes needed. This will most likely always be one.
-* **dod_cnt**: Device output_data struct count. Specifies the amount of (**struct _output_data**) bytes needed. Integer should be equal to the number of  
+* **dod_cnt**: Device output_data struct count. Specifies the amount of (**struct _output_data**) bytes needed. Integer should be equal to the number of 
 Plane -> CRTC -> Encoder -> Connector pairs found when running the command **lucur &mdash;&mdash;display-info=/dev/dri/card0**.
 
 ## Description
@@ -68,8 +68,7 @@ Most if not all information needed for preallocation can be acquired by running 
 ## See Also
 
 **[dlu_otma](https://easyip2023.github.io/lucurious-docs/api/dlu_otma)
-[dlu_otba](https://easyip2023.github.io/lucurious-docs/api/dlu_otba)
-**
+[dlu_otba](https://easyip2023.github.io/lucurious-docs/api/dlu_otba)**
 
 ## AUTHOR
 
