@@ -25,18 +25,18 @@ These layers are automatically enabled by the repective vulkan functions and wil
 **-i, &mdash;&mdash;pie**
 
 Prints a list of all instance level vulkan external extensions for a given systems. Basically instance extensions
-allow developers to describe how a device is setup. It also enables to ability to utilize extension related vulkan function calls.
+allow developers to describe how a device is setup. It also enables the ability to utilize extension related vulkan function calls.
 
-**-d, &mdash;&mdash;pde** `<VkPhysicalDeviceType>`
+**-d, &mdash;&mdash;pde** [<VkPhysicalDeviceType>](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceType.html)
 
 Prints a list of all physical device level vulkan external extensions for a given system. Basically device extensions
-allow developers to describe what a particular device does. It also enables to ability to utilize extension related vulkan function calls.
+allow developers to describe what a particular device does. It also enables the ability to utilize extension related vulkan function calls.
 
-**&mdash;&mdash;pdp** `<VkPhysicalDeviceType>`
+&nbsp;&nbsp;&nbsp;&nbsp;**&mdash;&mdash;pdp** [<VkPhysicalDeviceType>](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceType.html)
 
 Print display devices list
 
-**&mdash;&mdash;display-info** `<drm device>`
+&nbsp;&nbsp;&nbsp;&nbsp;**&mdash;&mdash;display-info** `<drm device>`
 
 This will display any compatible (DRM Device/KMS Node) and it's capabilities. Mainly used to limit allocations and instruction
 execution when calling **[dlu_drm_kms_node_enum_ouput_dev(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_drm_kms_node_enum_ouput_dev)**. If no
@@ -51,8 +51,8 @@ Prints the current version of lucurious API
 Show help message.
 
 ## Bugs
-When using the **&mdash;&mdash;display-info** flag one must add include "=/dev/dri/card0". I decided on making the option to choose which kms node you want to
-query information for optional.
+When using the **&mdash;&mdash;display-info** flag one must add include **=** if they want to specify the device they wish to query information from.
+I decided on making the option to choose which kms node you want to query information for optional.
 
 ## Author
 Vincent Davis Jr.

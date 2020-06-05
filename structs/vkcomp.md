@@ -112,11 +112,6 @@ typedef struct _vkcomp {
 
 Adding information about each struct
 
-## RETURN VALUES
-
-Upon success or failure each VkResult function returns one of vulkans VkResult enum codes located here.
-I<https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkResult.html>
-
 ## AUTHOR
 
 Vincent Davis Jr.
