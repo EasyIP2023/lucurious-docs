@@ -17,15 +17,17 @@ straight out of science fiction.
 * [lucur(1)](https://easyip2023.github.io/lucurious-docs/cmd/lucur)
 
 ## Structures
-* [vkcomp(3)](https://easyip2023.github.io/lucurious-docs/structs/vkcomp)
-* [dlu_drm_core(3)](https://easyip2023.github.io/lucurious-docs/structs/dlu_drm_core)
-* [dlu_otma_mems(3)](https://easyip2023.github.io/lucurious-docs/structs/dlu_otma_mems)
+* [vkcomp(3)](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp)
+* [dlu_drm_core(3)](https://easyip2023.github.io/lucurious-docs/structs/drm/dlu_drm_core) **Current;y still writing**
+* [dlu_otma_mems(3)](https://easyip2023.github.io/lucurious-docs/structs/utils/dlu_otma_mems)
 
 ## Enums
+* [dlu_block_type](https://easyip2023.github.io/lucurious-docs/enums/utils/dlu_block_type)
 
 ## API Calls
 * [dlu_set_*(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_set)
-* [dlu_init_vk(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_init_vk)
-* [dlu_freeup_vk(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_freeup_vk)
-* [dlu_otma(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_otma)
-* [dlu_otba(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_otba)
+* [dlu_init_vk(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_init_vk)
+* [dlu_freeup_vk(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_freeup_vk)
+* [dlu_otma(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma)
+* [dlu_otba(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)
+* [dlu_release_blocks(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_release_blocks)

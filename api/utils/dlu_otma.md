@@ -7,13 +7,17 @@ dlu_otma - a function that allows for allocation of a very large block of type p
 ## C Specification
 
 ```c
-bool dlu_otma(dlu_block_type type, dlu_otma_mems ma);
+bool dlu_otma(
+  dlu_block_type type,
+  dlu_otma_mems ma
+);
 ```
 
 ## Members
 
-* **type**: Specifies the type of block one wants to allocate. See [dlu_block_type](https://easyip2023.github.io/lucurious-docs/enum/dlu_block_type) for more details
-* **ma**: Structure that helps specify the exact amount bytes one wants to allocate. See [dlu_otma_mems](https://easyip2023.github.io/lucurious-docs/structs/dlu_otma_mems)
+* **type**: Specifies the type of block to allocate. See [dlu_block_type](https://easyip2023.github.io/lucurious-docs/enums/utils/dlu_block_type) for more details.
+* **ma**: Structure that helps specify the exact amount bytes to allocate. See [dlu_otma_mems](https://easyip2023.github.io/lucurious-docs/structs/utils/dlu_otma_mems)
+for more details.
 
 ## Description
 
@@ -30,13 +34,14 @@ Upon failure otma returns false.
 
 ## Bugs
 
-You have to currently over allocate in order to assign addresses.
+You have to currently over allocate in order to assign all addresses.
 
 ## See Also
 
-[dlu_otba](https://easyip2023.github.io/lucurious-docs/api/dlu_otba)
-dlu_otma_mems](https://easyip2023.github.io/lucurious-docs/structs/dlu_otma_mems)
-[dlu_block_type](https://easyip2023.github.io/lucurious-docs/enum/dlu_block_type)
+[dlu_otba](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)
+[dlu_release_blocks(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_release_blocks)
+[dlu_otma_mems](https://easyip2023.github.io/lucurious-docs/structs/utils/dlu_otma_mems)
+[dlu_block_type](https://easyip2023.github.io/lucurious-docs/enums/utils/dlu_block_type)
 
 ## AUTHOR
 

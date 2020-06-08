@@ -39,7 +39,7 @@ Print display devices list
 &nbsp;&nbsp;&nbsp;&nbsp;**&mdash;&mdash;display-info** `<drm device>`
 
 This will display any compatible (DRM Device/KMS Node) and it's capabilities. Mainly used to limit allocations and instruction
-execution when calling **[dlu_drm_kms_node_enum_ouput_dev(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_drm_kms_node_enum_ouput_dev)**. If no
+execution when calling **[dlu_drm_kms_node_enum_ouput_dev(3)](https://easyip2023.github.io/lucurious-docs/api/drm/dlu_drm_kms_node_enum_ouput_dev)**. If no
 preferred DRM device available cycle through all of them and display Plane -> CTRC -> Encoder -> Connector pairs. The argument for this flag is optional
 
 **-v, &mdash;&mdash;version**

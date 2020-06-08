@@ -15,7 +15,7 @@ vkcomp **dlu_freeup_vk(vkcomp** *app)
 ## DESCRIPTION
 
 The wlu_freeup_vk() function free's up any memory if allocate that belongs to the vkcomp
-pointer variable viewable in [vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp).
+pointer variable viewable in [vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp).
 Most memory free'd here are cached vulkan handles.
 
 ## EXAMPLE

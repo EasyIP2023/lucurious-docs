@@ -67,8 +67,8 @@ Most if not all information needed for preallocation can be acquired by running 
 
 ## See Also
 
-[dlu_otma](https://easyip2023.github.io/lucurious-docs/api/dlu_otma)
-[dlu_otba](https://easyip2023.github.io/lucurious-docs/api/dlu_otba)
+[dlu_otma](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma)
+[dlu_otba](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)
 
 ## AUTHOR
 
