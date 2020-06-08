@@ -17,9 +17,9 @@ bool dlu_otba(
 
 ## Members
 
-* **type**: Specifies the type of block to allocate. See [dlu_block_type](https://easyip2023.github.io/lucurious-docs/enums/utils/dlu_block_type) for more details
-* **addr**: Addresses passed here should be the starting address of the [vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp) and
-[dlu_drm_core](https://easyip2023.github.io/lucurious-docs/structs/drm/dlu_drm_core) structures.
+* **type**: Specifies the type of block to allocate. See [dlu_block_type(3)](https://easyip2023.github.io/lucurious-docs/enums/utils/dlu_block_type) for more details
+* **addr**: Addresses passed here should be the starting address of the [vkcomp(3)](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp) and
+[dlu_drm_core(3)](https://easyip2023.github.io/lucurious-docs/structs/drm/dlu_drm_core) structures.
 * **index**: Specifies the index of a particular buffer. To allocate space for the members inside said buffer. These buffers are mainly structures whose
 members are generally handles.
 * **arr_size**: Specifies the amount of element you wish to allocate for a particular buffer. These elements are multiplied by there corresponding data types.
@@ -40,9 +40,9 @@ You have to currently over allocate in order to assign all addresses.
 
 ## See Also
 
-[dlu_otma](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma)
-[vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp)
-[dlu_drm_core](https://easyip2023.github.io/lucurious-docs/structs/drm/dlu_drm_core)
+[dlu_otma(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma)
+[vkcomp(3)](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp)
+[dlu_drm_core(3)](https://easyip2023.github.io/lucurious-docs/structs/drm/dlu_drm_core)
 
 ## AUTHOR
 

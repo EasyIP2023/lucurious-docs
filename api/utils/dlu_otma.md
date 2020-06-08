@@ -15,8 +15,8 @@ bool dlu_otma(
 
 ## Members
 
-* **type**: Specifies the type of block to allocate. See [dlu_block_type](https://easyip2023.github.io/lucurious-docs/enums/utils/dlu_block_type) for more details.
-* **ma**: Structure that helps specify the exact amount bytes to allocate. See [dlu_otma_mems](https://easyip2023.github.io/lucurious-docs/structs/utils/dlu_otma_mems)
+* **type**: Specifies the type of block to allocate. See [dlu_block_type(3)](https://easyip2023.github.io/lucurious-docs/enums/utils/dlu_block_type) for more details.
+* **ma**: Structure that helps specify the exact amount bytes to allocate. See [dlu_otma_mems(3)](https://easyip2023.github.io/lucurious-docs/structs/utils/dlu_otma_mems)
 for more details.
 
 ## Description
@@ -38,10 +38,10 @@ You have to currently over allocate in order to assign all addresses.
 
 ## See Also
 
-[dlu_otba](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)
+[dlu_otba(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)
 [dlu_release_blocks(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_release_blocks)
-[dlu_otma_mems](https://easyip2023.github.io/lucurious-docs/structs/utils/dlu_otma_mems)
-[dlu_block_type](https://easyip2023.github.io/lucurious-docs/enums/utils/dlu_block_type)
+[dlu_otma_mems(3)](https://easyip2023.github.io/lucurious-docs/structs/utils/dlu_otma_mems)
+[dlu_block_type(3)](https://easyip2023.github.io/lucurious-docs/enums/utils/dlu_block_type)
 
 ## AUTHOR
 

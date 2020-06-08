@@ -37,7 +37,7 @@ int main() {
 
 ## SEE ALSO
 
-dlu_init_vk(3)
+[dlu_init_vk(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_init_vk)
 
 ## AUTHOR
 

@@ -18,7 +18,7 @@ straight out of science fiction.
 
 ## Structures
 * [vkcomp(3)](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp)
-* [dlu_drm_core(3)](https://easyip2023.github.io/lucurious-docs/structs/drm/dlu_drm_core) **Current;y still writing**
+* [dlu_drm_core(3)](https://easyip2023.github.io/lucurious-docs/structs/drm/dlu_drm_core) **Currently still writing**
 * [dlu_otma_mems(3)](https://easyip2023.github.io/lucurious-docs/structs/utils/dlu_otma_mems)
 
 ## Enums

@@ -16,8 +16,8 @@ N/A
 
 ## Description
 
-This function removes the pages of memory created with [dlu_otma](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma). If no blocks where
-allocated then it simply does nothing.
+This function removes the pages of memory created with [dlu_otma(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma).
+If no blocks where allocated then it simply does nothing.
 
 ## RETURN VALUES
 
@@ -29,7 +29,7 @@ N/A.
 
 ## See Also
 
-[dlu_otma](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma)
+[dlu_otma(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma)
 
 ## AUTHOR
 

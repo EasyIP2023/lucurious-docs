@@ -17,11 +17,11 @@ typedef enum _dlu_block_type {
 
 ## Members
 
-* **DLU_LARGE_BLOCK_PRIV **: Enum value for specifying a large private block of memory.
-* **DLU_SMALL_BLOCK_PRIVt**: Enum value for specifying a small private block of memory. This value is be passed when [dlu_otba](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)
+* **DLU_LARGE_BLOCK_PRIV**: Enum value for specifying a large private block of memory.
+* **DLU_SMALL_BLOCK_PRIV**: Enum value for specifying a small private block of memory. This value is be passed when [dlu_otba(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)
 sub allocates blocks of memory.
 * **DLU_LARGE_BLOCK_SHARED**: Enum value for specifying a large shared block of memory. **Currently not in use**
-* **DLU_SMALL_BLOCK_SHARED**: Enum value for specifying a small shared block of memory. This value is be passed when [dlu_otba](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)
+* **DLU_SMALL_BLOCK_SHARED**: Enum value for specifying a small shared block of memory. This value is be passed when [dlu_otba(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)
 sub allocates blocks of memory. **Currently not in use**
 
 ## Description
@@ -30,8 +30,8 @@ This enum allows for specifying the exact type of memory to initially allocate a
 
 ## See Also
 
-[dlu_otma](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma)
-[dlu_otba](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)
+[dlu_otma(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma)
+[dlu_otba(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)
 
 ## AUTHOR
 
