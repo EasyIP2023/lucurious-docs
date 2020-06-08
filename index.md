@@ -27,7 +27,5 @@ straight out of science fiction.
 * [dlu_set_*(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_set)
 * [dlu_init_vk(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_init_vk)
 * [dlu_freeup_vk(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_freeup_vk)
-
-[//]: <> ## RETURN VALUES
-[//]: <> Upon success or failure each VkResult function returns one of vulkans VkResult enum codes located here.
-[//]: <> <https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkResult.html>
+* [dlu_otma(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_otma)
+* [dlu_otba(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_otba)
