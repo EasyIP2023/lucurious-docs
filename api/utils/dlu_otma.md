@@ -34,7 +34,7 @@ Upon failure otma returns false.
 
 ## Bugs
 
-You have to currently over allocate in order to assign all addresses.
+N/A.
 
 ## See Also
 
