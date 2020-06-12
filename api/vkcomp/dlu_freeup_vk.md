@@ -2,7 +2,7 @@
 
 ## BRIEF DESCRIPTION
 
-&nbsp;&nbsp;&nbsp;&nbsp;wlu_freeup_vk - Frees vkcomp memory
+**wlu_freeup_vk** - Frees vkcomp memory
 
 ## C SPECIFICATION
 
@@ -16,7 +16,7 @@ void dlu_freeup_vk(void *data);
 
 ## DESCRIPTION
 
-The wlu_freeup_vk() function free's up any memory if allocate that belongs to the vkcomp
+The **wlu_freeup_vk(3)** function free's up any memory if allocate that belongs to the vkcomp
 pointer variable viewable in [vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp).
 Most memory free'd here are cached vulkan handles.
 

@@ -2,7 +2,7 @@
 
 ## BRIEF DESCRIPTION
 
-vkcomp - a structure that allows for easy and better tracking of vulkan handles to objects that vulkan manipulates for you.
+**vkcomp** - a structure that allows for easy and better tracking of vulkan handles to objects that vulkan manipulates for you.
 
 ## C SPECIFICATION
 

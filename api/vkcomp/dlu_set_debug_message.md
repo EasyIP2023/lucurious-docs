@@ -2,14 +2,14 @@
 
 ## BRIEF DESCRIPTION
 
-dlu_set_debug_message - allows API to set the output of validation layer messages by exposing a VkDebugReportCallbackEXT handle. 
+**dlu_set_debug_message** - allows API to set the output of validation layer messages by exposing a VkDebugUtilsMessengerEXT handle. 
 
 ## C Specification
 
 ```c
 VkResult dlu_set_debug_message(
   vkcomp *app,
-  VkDebugUtilsMessengerCreateInfoEXT flags,
+  int flags,
   VkDebugUtilsMessageSeverityFlagsEXT messageSeverity,
   VkDebugUtilsMessageTypeFlagsEXT messageType
 );
@@ -27,7 +27,7 @@ for enum constants.
 ## DESCRIPTION
 
 When using this function, first query for available layers with [lucur(1)](https://easyip2023.github.io/lucurious-docs/cmd/lucur) command line helper tool. After enable available validation layers with
-[dlu_create_instance](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/dlu_create_instance). The **dlu_set_debug_message(3)** basically just changes the output of validation layer error message.
+[dlu_create_instance](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/dlu_create_instance). The **dlu_set_debug_message(3)** function basically just changes the output of validation layer error message.
 Like to make a note that not all validation layer messages are a result of fatal errors.
 
 ## RETURN VALUES

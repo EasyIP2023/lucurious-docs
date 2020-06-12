@@ -1,9 +1,8 @@
-
 <a href="https://easyip2023.github.io/lucurious-docs/" class="button">Main Page</a>
 
 ## BRIEF DESCRIPTION
 
-wlu_init_vk - This will return a pointer a vkcomp struct
+**wlu_init_vk** - This will return a pointer a vkcomp struct
 
 ## C SPECIFICATION
 

@@ -2,7 +2,7 @@
 
 ## BRIEF DESCRIPTION
 
-dlu_otba - a function that allows for sub allocating blocks of memory from a larger block of memory.
+**dlu_otba** - a function that allows for sub allocating blocks of memory from a larger block of memory.
 
 ## C SPECIFICATION
 

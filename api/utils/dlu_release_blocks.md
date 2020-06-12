@@ -2,7 +2,7 @@
 
 ## BRIEF DESCRIPTION
 
-dlu_release_blocks - a function that munmap(2) the larger allocated blocks.
+**dlu_release_blocks** - a function that munmap(2) the larger allocated blocks.
 
 ## C SPECIFICATION
 

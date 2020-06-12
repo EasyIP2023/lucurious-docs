@@ -2,7 +2,7 @@
 
 ## BRIEF DESCRIPTION
 
-dlu_otma - a function that allows for allocation of a very large block of type private or shared once.
+**dlu_otma** - a function that allows for allocation of a very large block of type private or shared once.
 
 ## C SPECIFICATION
 
