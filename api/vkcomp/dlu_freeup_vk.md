@@ -4,13 +4,15 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;wlu_freeup_vk - Frees vkcomp memory
 
-## SYNOPSIS
+## C SPECIFICATION
 
-**#define** LUCUR_VKCOMP_API
+```c
+void dlu_freeup_vk(void *data);
+``
 
-**#include** <dluc/lucurious.h>
+## MEMBERS
 
-vkcomp **dlu_freeup_vk(vkcomp** *app)
+* **data**: Pointer should be a member
 
 ## DESCRIPTION
 
@@ -18,22 +20,13 @@ The wlu_freeup_vk() function free's up any memory if allocate that belongs to th
 pointer variable viewable in [vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp).
 Most memory free'd here are cached vulkan handles.
 
-## EXAMPLE
+## RETURN VALUES
 
-**Program source**
+N/A.
 
-```c
-#define LUCUR_VKCOMP_API
-#include> <dluc/lucurious.h>
+## BUGS
 
-int main() {
-  vkcomp *app = dlu_init_vk();
-
-  dlu_freeup_vk(app);
-
-  return 0;
-}
-```
+N/A.
 
 ## SEE ALSO
 

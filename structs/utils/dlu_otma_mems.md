@@ -30,7 +30,7 @@ typedef struct _dlu_otma_mems {
 } dlu_otma_mems;
 ```
 
-## Members
+## MEMBERS
 
 * **inta_cnt**: Integer array count. Specifies the amount of bytes of type integer to preallocate.
 * **cha_cnt**: Character arrays count. Specifies the amount of character arrays one wants to allocate.
@@ -58,14 +58,14 @@ VkImage, VkImageView, VkDeviceMemory, VkSampler handles to allocate.
 * **dod_cnt**: Device output_data struct count. Specifies the amount of (**struct _output_data**) bytes needed. Integer should be equal to the number of 
 Plane -> CRTC -> Encoder -> Connector pairs found when running the command **lucur &mdash;&mdash;display-info=/dev/dri/card0**.
 
-## Description
+## DESCRIPTION
 
 This structure allows for defining the exact amount of heap segment bytes needed throughout program execution. This is mainly
 for preallocation of reusable lucurious struct member handles, but may evolve as I continue to work on lucurious.
 Most if not all information needed for preallocation can be acquired by running **vulkaninfo** (apart of the vulkan-tools package) or **lucur(1)**
 (apart of the lucurious package).
 
-## See Also
+## SEE ALSO
 
 [dlu_otma(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma)
 [dlu_otba(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)

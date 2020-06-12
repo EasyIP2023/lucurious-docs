@@ -4,7 +4,7 @@
 
 dlu_block_type - an enum to specify a type of block of memory.
 
-## C Specification
+## C SPECIFICATION
 
 ```c
 typedef enum _dlu_block_type {
@@ -15,7 +15,7 @@ typedef enum _dlu_block_type {
 } dlu_block_type;
 ```
 
-## Members
+## MEMBERS
 
 * **DLU_LARGE_BLOCK_PRIV**: Enum value for specifying a large private block of memory.
 * **DLU_SMALL_BLOCK_PRIV**: Enum value for specifying a small private block of memory. This value is be passed when [dlu_otba(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)
@@ -24,11 +24,11 @@ sub allocates blocks of memory.
 * **DLU_SMALL_BLOCK_SHARED**: Enum value for specifying a small shared block of memory. This value is be passed when [dlu_otba(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)
 sub allocates blocks of memory. **Currently not in use**
 
-## Description
+## DESCRIPTION
 
 This enum allows for specifying the exact type of memory to initially allocate and sub allocate from that initial allocation.
 
-## See Also
+## SEE ALSO
 
 [dlu_otma(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma)
 [dlu_otba(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)

@@ -17,20 +17,21 @@ The **lucur** command line tool is used to assist in the construction of single 
 
 **-l, &mdash;&mdash;pgvl**
 
-Prints a list of all validation layers installed on the system. All useful validation layers are
+Prints a list of all validation layers installed on the system that can be activated. All useful validation layers are
 bundled up into a layer called **VK_LAYER_KHRONOS_validation**. Vulkan validation layers are useful to enable when debugging
-your code as it gives you a detailed output on what you did wrong. The ouput is mostly Vulkan Structure members whose data input were wrong.
-These layers are automatically enabled by the repective vulkan functions and will detail any errors caused by wrongful practices.
+your code as it gives you a detailed output on what you did wrong. The ouput is mostly Vulkan Structure members whose data input were wrong
+**(validity errors)**. There are also **runtime errors**. These layers are automatically enabled by the repective vulkan functions and
+will detail any errors caused by wrongful practices.
 
 **-i, &mdash;&mdash;pie**
 
-Prints a list of all instance level vulkan external extensions for a given systems. Basically instance extensions
-allow developers to describe how a device is setup. It also enables the ability to utilize extension related vulkan function calls.
+Prints a list of all instance level vulkan external extensions for a given system that can be activated. Basically instance extensions
+allow developers to describe how a device is setup. It also enables the ability to utilize activated extension vulkan function calls.
 
 **-d, &mdash;&mdash;pde** [VkPhysicalDeviceType](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceType.html)
 
-Prints a list of all physical device level vulkan external extensions for a given system. Basically device extensions
-allow developers to describe what a particular device does. It also enables the ability to utilize extension related vulkan function calls.
+Prints a list of all physical device level vulkan external extensions for a given system that can be activated. Basically device extensions
+allow developers to describe what a particular device does. It also enables the ability to utilize activated extension vulkan function calls.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**&mdash;&mdash;pdp** [VkPhysicalDeviceType](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceType.html)
 
@@ -50,9 +51,9 @@ Prints the current version of lucurious API
 
 Show help message.
 
-## Bugs
+## BUGS
 When using the **&mdash;&mdash;display-info** flag one must add include **=** if they want to specify the device they wish to query information from.
 I decided on making the option to choose which kms node you want to query information for optional.
 
-## Author
+## AUTHOR
 Vincent Davis Jr.

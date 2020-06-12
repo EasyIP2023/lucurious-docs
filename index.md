@@ -7,8 +7,7 @@
 This is not official documentation. I initially started thinking of how I wanted to implement lucurious as of February 2019. I was watching the t.v series 
 The Expanse and was looking at how awesome the user interfaces looked. After thinking I realized that I've seen this done before in video games and in web browsers. 
 So, why not as an entire compositor? After over a year of on/off programming and thinking it is now an **easy to use** library for building highly sophisticated and 
-advanced Vulkan DRM renderers that work directly with KMS. These renderers allow for easy creation of interactable single application compositors that appear to be 
-straight out of science fiction.
+advanced Vulkan DRM renderers. These renderers allow for easy creation of interactable single application compositors that appear to be straight out of science fiction.
 
 ## Examples and Usage
 * [lucurious examples](https://github.com/EasyIP2023/lucurious-examples)
@@ -26,6 +25,7 @@ straight out of science fiction.
 
 ## API Calls
 * [dlu_set_*(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_set)
+* [dlu_set_debug_message(3)](https://easyip2023.github.io/lucurious-docks/api/vkcomp/dlu_set_debug_message)
 * [dlu_init_vk(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_init_vk)
 * [dlu_freeup_vk(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_freeup_vk)
 * [dlu_otma(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma)
