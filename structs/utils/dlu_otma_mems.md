@@ -4,7 +4,7 @@
 
 dlu_otma_mems - a structure for defining byte allocation.
 
-## C Specification
+## C SPECIFICATION
 
 ```c
 typedef struct _dlu_otma_mems {

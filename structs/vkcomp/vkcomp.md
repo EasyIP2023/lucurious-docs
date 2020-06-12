@@ -4,12 +4,12 @@
 
 vkcomp - a structure that allows for easy and better tracking of vulkan handles to objects that vulkan manipulates for you.
 
-## SYNOPSIS
+## C SPECIFICATION
 
+```c
 **#define** LUCUR_VKCOMP_API
 **#include** <dluc/lucurious.h>
 
-```c
 typedef struct _vkcomp {
   PFN_vkDestroyDebugReportCallbackEXT dbg_destroy_report_callback;
   VkDebugReportCallbackEXT debug_report_callback;
@@ -115,7 +115,7 @@ N/A.
 
 [dlu_init_vk(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_init_vk)
 [dlu_freeup_vk(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_freeup_vk)
-[dlu_set_global_layers(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_set_global_layers)
+[dlu_set_debug_message(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_set_debug_message)
 
 ## Author
 
