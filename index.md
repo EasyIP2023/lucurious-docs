@@ -21,7 +21,7 @@ advanced Vulkan DRM renderers. These renderers allow for easy creation of intera
 * [dlu_otma_mems(3)](https://easyip2023.github.io/lucurious-docs/structs/utils/dlu_otma_mems)
 
 ## Enums
-* [dlu_block_type](https://easyip2023.github.io/lucurious-docs/enums/utils/dlu_block_type)
+* [dlu_block_type(3)](https://easyip2023.github.io/lucurious-docs/enums/utils/dlu_block_type)
 
 ## API Calls
 * [dlu_set_*(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_set)

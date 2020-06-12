@@ -7,12 +7,12 @@ vkcomp - a structure that allows for easy and better tracking of vulkan handles 
 ## C SPECIFICATION
 
 ```c
-**#define** LUCUR_VKCOMP_API
-**#include** <dluc/lucurious.h>
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
 
 typedef struct _vkcomp {
-  PFN_vkDestroyDebugReportCallbackEXT dbg_destroy_report_callback;
-  VkDebugReportCallbackEXT debug_report_callback;
+  PFN_vkDestroyDebugUtilsMessengerEXT dbg_destroy_utils_msg;
+  VkDebugUtilsMessengerEXT debug_utils_msg;
 
   VkInstance instance;
   VkSurfaceKHR surface;
@@ -104,8 +104,8 @@ typedef struct _vkcomp {
 
 ## MEMBERS
 
-* **dbg_destroy_report_callback**: a handle used in the destruction of an exposed VkDebugReportCallbackEXT handle. 
-* **debug_report_callback**: an exposed VkDebugReportCallbackEXT handle that allows for lucurious API to change validation layer output.
+* **dbg_destroy_utils_msg**: a handle used in the destruction of an exposed VkDebugUtilsMessengerEXT handle/object.
+* **debug_utils_msg**: an exposed VkDebugUtilsMessengerEXT handle/object that allows for lucurious API to change callback output (i.e. validation layer output).
 
 ## DESCRIPTION
 
