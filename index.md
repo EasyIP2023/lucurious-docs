@@ -25,7 +25,7 @@ advanced Vulkan DRM renderers. These renderers allow for easy creation of intera
 
 ## API Calls
 * [dlu_set_*(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_set)
-* [dlu_set_debug_message(3)](https://easyip2023.github.io/lucurious-docks/api/vkcomp/dlu_set_debug_message)
+* [dlu_set_debug_message(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_set_debug_message)
 * [dlu_init_vk(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_init_vk)
 * [dlu_freeup_vk(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_freeup_vk)
 * [dlu_otma(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma)

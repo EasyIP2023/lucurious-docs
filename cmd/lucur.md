@@ -2,7 +2,7 @@
 
 ## BRIEF DESCRIPTION
 
-lucur - liblucurious command line tool
+**lucur** - liblucurious command line tool
 
 ## SYNOPSIS
 **lucur** [options]

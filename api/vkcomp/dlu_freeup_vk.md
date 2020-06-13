@@ -8,7 +8,7 @@
 
 ```c
 void dlu_freeup_vk(void *data);
-``
+```
 
 ## MEMBERS
 

@@ -2,7 +2,7 @@
 
 ## BRIEF DESCRIPTION
 
-**vkcomp** - a structure that allows for easy and better tracking of vulkan handles to objects that vulkan manipulates for you.
+**vkcomp** - a structure that allows for easy and better tracking of handles to objects that vulkan manipulates for you.
 
 ## C SPECIFICATION
 
@@ -11,6 +11,13 @@
 #include <dluc/lucurious.h>
 
 typedef struct _vkcomp {
+  PFN_vkQueueBeginDebugUtilsLabelEXT dbg_utils_queue_begin;
+  PFN_vkQueueEndDebugUtilsLabelEXT dbg_utils_queue_end;
+  PFN_vkQueueInsertDebugUtilsLabelEXT dbg_utils_queue_insert;
+  PFN_vkCmdBeginDebugUtilsLabelEXT dbg_utils_cmd_begin;
+  PFN_vkCmdEndDebugUtilsLabelEXT dbg_utils_cmd_end;
+  PFN_vkCmdInsertDebugUtilsLabelEXT dbg_utils_cmd_insert;
+
   PFN_vkDestroyDebugUtilsMessengerEXT dbg_destroy_utils_msg;
   VkDebugUtilsMessengerEXT debug_utils_msg;
 
@@ -104,7 +111,13 @@ typedef struct _vkcomp {
 
 ## MEMBERS
 
-* **dbg_destroy_utils_msg**: a handle used in the destruction of an exposed VkDebugUtilsMessengerEXT handle/object.
+* **dbg_utils_queue_begin**: a function pointer used in the starting of a VkQueue debug label region. Basically allows you to debug your queue.
+* **dbg_utils_queue_end**: a function pointer used in the closing of a VkQueue debug label region.
+* **dbg_utils_queue_insert**: a function pointer used in the insertion of a [VkDebugUtilsLabelEXT](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsLabelEXT.html) debug label into a VkQueue.
+* **dbg_utils_cmd_begin**: a function pointer used in the starting of a VkCommandBuffer debug label region. Basically allows you to debug command buffers.
+* **dbg_utils_cmd_end**: a function pointer used in the closing of a VkCommandBuffer debug label region.
+* **dbg_utils_cmd_insert**: a function pointer used in the insertion of a [VkDebugUtilsLabelEXT](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsLabelEXT.html) debug label into a VkCommandBuffer.
+* **dbg_destroy_utils_msg**: a function pointer used in the destruction of an exposed VkDebugUtilsMessengerEXT handle/object.
 * **debug_utils_msg**: an exposed VkDebugUtilsMessengerEXT handle/object that allows for lucurious API to change callback output (i.e. validation layer output).
 
 ## DESCRIPTION
