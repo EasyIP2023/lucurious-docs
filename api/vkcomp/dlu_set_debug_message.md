@@ -7,6 +7,9 @@
 ## C Specification
 
 ```c
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
 VkResult dlu_set_debug_message(
   vkcomp *app,
   int flags,
@@ -27,7 +30,7 @@ for enum constants.
 ## DESCRIPTION
 
 When using this function, first query for available layers with [lucur(1)](https://easyip2023.github.io/lucurious-docs/cmd/lucur) command line helper tool. After enable available validation layers with
-[dlu_create_instance](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/dlu_create_instance). The **dlu_set_debug_message(3)** function basically just changes the output of validation layer error message.
+[dlu_create_instance(3)](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/dlu_create_instance). The **dlu_set_debug_message(3)** function basically just changes the output of validation layer error message.
 Like to make a note that not all validation layer messages are a result of fatal errors.
 
 ## RETURN VALUES

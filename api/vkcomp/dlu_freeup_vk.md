@@ -7,6 +7,9 @@
 ## C SPECIFICATION
 
 ```c
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
 void dlu_freeup_vk(void *data);
 ```
 

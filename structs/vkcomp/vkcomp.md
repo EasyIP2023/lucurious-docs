@@ -24,15 +24,20 @@ typedef struct _vkcomp {
   VkInstance instance;
   VkSurfaceKHR surface;
 
-  VkPhysicalDevice physical_device;
-  VkDevice device;
-  struct _queue_family_indices {
-    uint32_t graphics_family;
-    uint32_t present_family;
-  } indices;
+  uint32_t pdc;
+  struct _pd_data {
+    VkPhysicalDevice phys_dev;
+    uint32_t gfam_idx;
+    uint32_t pfam_idx;
+  } *pd_data;
 
-  VkQueue graphics_queue;
-  VkQueue present_queue;
+  uint32_t ldc;
+  struct _ld_data {
+    VkQueue graphics;
+    VkQueue present;
+    VkDevice device;
+    uint32_t pdi;
+  } *ld_data;
 
   uint32_t sdc;
   struct _sc_data {
@@ -61,21 +66,32 @@ typedef struct _vkcomp {
       VkImageView view;
       VkDeviceMemory mem;
     } depth;
+
+    uint32_t ldi;
   } *sc_data;
 
+  struct _gp_cache {
+    VkPipelineCache pipe_cache;
+
+    uint32_t ldi;
+  } gp_cache;
+
   uint32_t gdc;
-  VkPipelineCache pipeline_cache;
   struct _gp_data {
     VkRenderPass render_pass;
     VkPipelineLayout pipeline_layout;
     uint32_t gpc;
     VkPipeline *graphics_pipelines;
+
+    uint32_t ldi;
   } *gp_data;
 
   uint32_t cdc;
   struct _cmd_data {
     VkCommandPool cmd_pool;
     VkCommandBuffer *cmd_buffs;
+
+    uint32_t ldi;
   } *cmd_data;
 
   uint32_t bdc;
@@ -84,6 +100,8 @@ typedef struct _vkcomp {
     VkDeviceMemory mem;
     VkDeviceSize size;
     char name;
+
+    uint32_t ldi;
   } *buff_data;
 
   uint32_t ddc;
@@ -92,14 +110,18 @@ typedef struct _vkcomp {
     uint32_t dlsc;
     VkDescriptorSetLayout *layouts;
     VkDescriptorSet *desc_set;
+
+    uint32_t ldi;
   } *desc_data;
-  
+
   uint32_t tdc;
   struct _text_data {
     VkImage image;
     VkImageView view;
     VkDeviceMemory mem;
     VkSampler sampler;
+
+    uint32_t ldi;
   } *text_data;
 
   uint32_t dpc;

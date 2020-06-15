@@ -21,7 +21,7 @@ bool dlu_otba(
 * **addr**: Addresses passed here should be the starting address of the [vkcomp(3)](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp) and
 [dlu_drm_core(3)](https://easyip2023.github.io/lucurious-docs/structs/drm/dlu_drm_core) structures.
 * **index**: Specifies the index of a particular buffer. To allocate space for the members inside said buffer. These buffers are mainly structures whose
-members are generally handles.
+members are generally handles. If no index is needed then pass **INDEX_IGNORE**.
 * **arr_size**: Specifies the amount of element you wish to allocate for a particular buffer. These elements are multiplied by there corresponding data types.
 
 ## DESCRIPTION

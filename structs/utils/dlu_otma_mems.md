@@ -25,6 +25,8 @@ typedef struct _dlu_otma_mems {
   uint32_t dd_cnt;
   uint32_t td_cnt;
   uint32_t dis_cnt;
+  uint32_t pd_cnt;
+  uint32_t ld_cnt;
   uint32_t drmc_cnt;
   uint32_t dod_cnt;
 } dlu_otma_mems;
@@ -54,6 +56,10 @@ VkDescriptorPool, VkDescriptorSetLayout, VkDescriptorSet handles to allocate.
 * **td_cnt**: Texture data count. Specifies the amount of (**struct _text_data**) bytes needed with respective information to allocate. The structure contains 
 VkImage, VkImageView, VkDeviceMemory, VkSampler handles to allocate.
 * **dis_cnt**: Display data count. More information later
+* **pd_cnt**: Physical data count. Specifies the amount of (**struct _pd_data**) bytes needed with respective information to allocate. Basically predefine the amount
+of VkPhysicalDevice handles one can utilize.
+* **ld_cnt**: Logical device data count. Specifies the amount of (**struct _ld_data**) bytes needed with respective information to allocate. Basically predefine the amount
+of VkDevice handles one can utilize per VkPhysicalDevice.
 * **drmc_cnt**: dlu_drm_core structure count. Specifies the amount of (**dlu_drm_core**) bytes needed. This will most likely always be one.
 * **dod_cnt**: Device output_data struct count. Specifies the amount of (**struct _output_data**) bytes needed. Integer should be equal to the number of 
 Plane -> CRTC -> Encoder -> Connector pairs found when running the command **lucur &mdash;&mdash;display-info=/dev/dri/card0**.
