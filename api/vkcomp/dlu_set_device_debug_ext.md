@@ -2,7 +2,7 @@
 
 ## BRIEF DESCRIPTION
 
-**dlu_set_device_debug_ext** - allows API to create function pointers used in the debugging process. 
+**dlu_set_device_debug_ext** - allows API to assign functions to function pointers used in the debugging process. 
 
 ## C Specification
 
@@ -19,7 +19,7 @@ VkResult dlu_set_device_debug_ext(
 ## MEMBERS
 
 * **app**: A pointer to the [vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp) structure.
-* **cur_ld**: Must pass the index of the current VkDevice (Logical Device). Preallocated devices with the use of [dlu_otba(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba).
+* **cur_ld**: Must pass the index of the current VkDevice (Logical Device). Preallocate devices with the use of [dlu_otba(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba).
 
 ## DESCRIPTION
 

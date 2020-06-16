@@ -17,11 +17,12 @@ advanced Vulkan DRM renderers. These renderers allow for easy creation of intera
 
 ## Structures
 * [vkcomp(3)](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp)
-* [dlu_drm_core(3)](https://easyip2023.github.io/lucurious-docs/structs/drm/dlu_drm_core) **Currently still writing**
+* [dlu_drm_core(3)](https://easyip2023.github.io/lucurious-docs/structs/drm/dlu_drm_core)
 * [dlu_otma_mems(3)](https://easyip2023.github.io/lucurious-docs/structs/utils/dlu_otma_mems)
 
 ## Enums
 * [dlu_block_type(3)](https://easyip2023.github.io/lucurious-docs/enums/utils/dlu_block_type)
+* [dlu_data_type(3)](https://easyip2023.github.io/lucurious-docs/enums/utils/dlu_data_type)
 
 ## API Calls
 * [dlu_set_*(3)](https://easyip2023.github.io/lucurious-docs/api/dlu_set)
@@ -33,3 +34,5 @@ advanced Vulkan DRM renderers. These renderers allow for easy creation of intera
 * [dlu_otma(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otma)
 * [dlu_otba(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_otba)
 * [dlu_release_blocks(3)](https://easyip2023.github.io/lucurious-docs/api/utils/dlu_release_blocks)
+* [dlu_drm_init_core(3)](https://easyip2023.github.io/lucurious-docs/api/drm/dlu_drm_init_core)
+* [dlu_drm_freeup_core(3)](https://easyip2023.github.io/lucurious-docs/api/drm/dlu_drm_freeup_core)

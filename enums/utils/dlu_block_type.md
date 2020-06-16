@@ -2,7 +2,7 @@
 
 ## BRIEF DESCRIPTION
 
-dlu_block_type - an enum to specify a type of block of memory.
+**dlu_block_type** - an enum to specify a type of block of memory.
 
 ## C SPECIFICATION
 

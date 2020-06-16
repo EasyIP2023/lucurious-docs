@@ -25,13 +25,13 @@ call chain and will detail any errors caused by wrongful practices.
 
 **-i, &mdash;&mdash;pie**
 
-Prints a list of all instance level vulkan external extensions for a given system that can be activated. Basically instance extensions
-allow developers to describe how a device is setup. It also enables the ability to utilize activated extension related vulkan function calls.
+Prints a list of all instance level vulkan extensions for a given system that can be activated. Basically instance extensions
+allow developers to describe what an application is setup to do. It also enables the ability to utilize activated extension related vulkan function calls.
 **NOTE: VK_EXT_debug_utils extension is both a combination of VK_EXT_debug_report and VK_EXT_debug_marker extensions.**
 
 **-d, &mdash;&mdash;pde** [VkPhysicalDeviceType](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceType.html)
 
-Prints a list of all physical device level vulkan external extensions for a given system that can be activated. Basically device extensions
+Prints a list of all physical device level vulkan extensions for a given system that can be activated. Basically device extensions
 allow developers to describe what a particular device does. It also enables the ability to utilize activated extension related vulkan function calls.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**&mdash;&mdash;pdp** [VkPhysicalDeviceType](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceType.html)

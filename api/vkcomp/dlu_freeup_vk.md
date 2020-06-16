@@ -10,12 +10,12 @@
 #define LUCUR_VKCOMP_API
 #include <dluc/lucurious.h>
 
-void dlu_freeup_vk(vkcomp *data);
+void dlu_freeup_vk(vkcomp *app);
 ```
 
 ## MEMBERS
 
-* **data**: A pointer to the [vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp) structure.
+* **app**: A pointer to the [vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp) structure.
 
 ## DESCRIPTION
 

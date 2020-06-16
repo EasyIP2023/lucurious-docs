@@ -19,7 +19,7 @@ N/A.
 
 ## DESCRIPTION
 
-This function returns a pointer to a [vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp) (vulkan compositor) structure.
+This function returns a pointer of type [vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp) (vulkan compositor) structure.
 
 ## RETURN VALUES
 
