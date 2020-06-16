@@ -20,7 +20,7 @@ VkResult dlu_set_debug_message(
 
 ## MEMBERS
 
-* **app**: A pointer to a lucurious structure called [vkcomp(3)](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp).
+* **app**: A pointer to the [vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp) structure.
 * **flags**: Must be 0.
 * **messageSeverity**: Basically specify how a given callback message is outputed. See [VkDebugUtilsMessageSeverityFlagsEXT](https://khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageSeverityFlagBitsEXT.html)
 for enum constants.
@@ -29,9 +29,9 @@ for enum constants.
 
 ## DESCRIPTION
 
-When using this function, first query for available layers with [lucur(1)](https://easyip2023.github.io/lucurious-docs/cmd/lucur) command line helper tool. After enable available validation layers with
-[dlu_create_instance(3)](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/dlu_create_instance). The **dlu_set_debug_message(3)** function basically just changes the output of validation layer error message.
-Like to make a note that not all validation layer messages are a result of fatal errors.
+When using this function, first query for available layers and instance extensions with [lucur(1)](https://easyip2023.github.io/lucurious-docs/cmd/lucur) command line helper tool. After enable available validation layers
+and instance extensions with [dlu_create_instance(3)](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/dlu_create_instance). The **dlu_set_debug_message(3)** function basically just changes the output of validation
+layer error message. Like to make a note that not all validation layer messages are a result of fatal errors.
 
 ## RETURN VALUES
 

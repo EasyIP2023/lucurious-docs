@@ -2,7 +2,7 @@
 
 ## BRIEF DESCRIPTION
 
-dlu_otma_mems - a structure for defining byte allocation.
+**dlu_otma_mems** - a structure for defining byte allocation.
 
 ## C SPECIFICATION
 

@@ -19,12 +19,11 @@ N/A.
 
 ## DESCRIPTION
 
-This function returns a pointer to a vkcomp (vulkan compositor) structure whose members are
-viewable here [vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp).
+This function returns a pointer to a [vkcomp](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp) (vulkan compositor) structure.
 
 ## RETURN VALUES
 
-Upon failure dlu_init_vk returns **NULL**. Upon success a pointer to a vkcomp structure.
+Upon failure dlu_init_vk returns **NULL**. Upon success an address to the starting member of the vkcomp structure.
 
 ## BUGS
 
@@ -32,6 +31,7 @@ N/A.
 
 ## SEE ALSO
 
+[vkcomp(3)](https://easyip2023.github.io/lucurious-docs/structs/vkcomp/vkcomp)
 [dlu_freeup_vk(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_freeup_vk)
 
 ## AUTHOR

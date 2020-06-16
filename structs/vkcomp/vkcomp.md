@@ -141,6 +141,7 @@ typedef struct _vkcomp {
 * **dbg_utils_cmd_insert**: a function pointer used in the insertion of a [VkDebugUtilsLabelEXT](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsLabelEXT.html) debug label into a VkCommandBuffer.
 * **dbg_destroy_utils_msg**: a function pointer used in the destruction of an exposed VkDebugUtilsMessengerEXT handle/object.
 * **debug_utils_msg**: an exposed VkDebugUtilsMessengerEXT handle/object that allows for lucurious API to change callback output (i.e. validation layer output).
+* **instance**: a VkInstance handle used in the association of having a connection to the Vulkan API and storing all per application state
 
 ## DESCRIPTION
 
@@ -151,6 +152,8 @@ N/A.
 [dlu_init_vk(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_init_vk)
 [dlu_freeup_vk(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_freeup_vk)
 [dlu_set_debug_message(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_set_debug_message)
+[dlu_set_debug_message(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_set_device_debug_ext)
+[dlu_create_instance(3)](https://easyip2023.github.io/lucurious-docs/api/vkcomp/dlu_create_instance)
 
 ## Author
 
