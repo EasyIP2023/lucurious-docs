@@ -1,0 +1,17 @@
+:stylesheet: ../../../css/rubygems.css
+:stylesheet: ../../../css/asciidoctor.css
+:stylesheet: ../../../css/asciidoctor.min.css
+
+link:../../index.html[home]
+
+== dlu_set_*(3)
+
+== BRIEF DESCRIPTION
+
+Most **dlu_set**_* functions are just wrappers around Vulkan structures. Thus, can be ignored and not utilized. I added them to limit
+the amount of lines of C code one has to write. Whenever the keyword *info* is appended to the end of the function call, that function
+is a wrapper around a Vulkan CreateInfo structure. The only *dlu_set* functions that are not wrappers around Vulkan structures are
+link:dlu_set_debug_message.html[dlu_set_debug_message(3)] and link:dlu_set_device_debug_ext.html[dlu_set_device_debug_ext(3)].
+
+== AUTHOR
+Vincent Davis Jr.

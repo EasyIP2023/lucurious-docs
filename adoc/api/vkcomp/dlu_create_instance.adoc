@@ -1,0 +1,68 @@
+:stylesheet: ../../../css/rubygems.css
+:stylesheet: ../../../css/asciidoctor.css
+:stylesheet: ../../../css/asciidoctor.min.css
+
+link:../../index.html[home]
+
+== dlu_create_instance(3)
+
+== BRIEF DESCRIPTION
+
+**dlu_create_instance** - a wrapper that creates a VkInstance handle and establish a connection to the Vulkan API
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
+VkResult dlu_create_instance(
+  vkcomp *app,
+  char *app_name,
+  char *engine_name,
+  uint32_t enabledLayerCount,
+  const char **ppEnabledLayerNames,
+  uint32_t enabledExtensionCount,
+  const char **ppEnabledExtensionNames
+);
+----
+
+== PARAMETERS
+
+* **app**: A pointer to the link:../../structs/vkcomp/vkcomp.html[vkcomp(3)] structure.
+* **app_name**: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkApplicationInfo.html[VkApplicationInfo]
+structure reserved for the name of the application. 
+* **engine_name**: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkApplicationInfo.html[VkApplicationInfo]
+structure reserved for the name of the engine used to create a given application. 
+* **enabledLayerCount**: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInstanceCreateInfo.html[VkInstanceCreateInfo] strucuture used to pass
+the number of Vulkan Layers one wants to enable.
+* **ppEnabledLayerNames**: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInstanceCreateInfo.html[VkInstanceCreateInfo] strucuture used to pass
+the actual Vulkan Layers one wants to enable. See link:../../cmd/lucur.html[lucur(1)] for details of available layers.
+* **enabledExtensionCount**: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInstanceCreateInfo.html[VkInstanceCreateInfo] strucuture used to pass
+the the number of instance extensions one wants to enable. 
+* **ppEnabledExtensionNames**: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInstanceCreateInfo.html[VkInstanceCreateInfo] strucuture used to pass
+the actual Vulkan instance extensions one wants to enable. See link:../../cmd/lucur.html[lucur(1)] for details of instance extensions.
+
+== DESCRIPTION
+
+The **dlu_create_instance(3)** creates a VkInstance handle and establishes a connection to the Vulkan API. It also acts as an easy wrapper
+that allows one to define instance extensions. Instance extensions basically allow developers to define what an app is setup to do. So, if I
+want the application to work with wayland or X etc... I would enable those extensions inorder to gain access to those particular capabilities.
+
+== RETURN VALUES
+
+Upon success or failure function returns one of Vulkans link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResult.html[VkResult]
+enum constants. These result codes are used to indicate return status information and runtime errors.
+
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:../../structs/vkcomp/vkcomp.html[vkcomp(3)]
+
+== AUTHOR
+
+Vincent Davis Jr.

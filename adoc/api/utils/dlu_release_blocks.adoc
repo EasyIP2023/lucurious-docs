@@ -1,0 +1,43 @@
+:stylesheet: ../../../css/rubygems.css
+:stylesheet: ../../../css/asciidoctor.css
+:stylesheet: ../../../css/asciidoctor.min.css
+
+link:../../index.html[home]
+
+== dlu_release_blocks(3)
+
+== BRIEF DESCRIPTION
+
+**dlu_release_blocks** - a function that munmap(2) the larger allocated blocks.
+
+== C SPECIFICATION
+
+[source,c]
+----
+void dlu_release_blocks();
+----
+
+== PARAMETERS
+
+N/A
+
+== DESCRIPTION
+
+This function removes the pages of memory created with link:dlu_otma.html[dlu_otma(3)].
+If no blocks where allocated then it simply does nothing.
+
+== RETURN VALUES
+
+No return value.
+
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:dlu_otma.html[dlu_otma(3)]
+
+== AUTHOR
+
+Vincent Davis Jr.

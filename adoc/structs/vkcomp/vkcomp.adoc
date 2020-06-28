@@ -1,0 +1,166 @@
+:stylesheet: ../../../css/rubygems.css
+:stylesheet: ../../../css/asciidoctor.css
+:stylesheet: ../../../css/asciidoctor.min.css
+
+== vkcomp(3)
+
+== BRIEF DESCRIPTION
+
+**vkcomp** - a structure that allows for easy and better tracking of handles to objects that vulkan manipulates for you.
+
+== C SPECIFICATION
+ 
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
+typedef struct _vkcomp {
+  PFN_vkQueueBeginDebugUtilsLabelEXT dbg_utils_queue_begin;
+  PFN_vkQueueEndDebugUtilsLabelEXT dbg_utils_queue_end;
+  PFN_vkQueueInsertDebugUtilsLabelEXT dbg_utils_queue_insert;
+  PFN_vkCmdBeginDebugUtilsLabelEXT dbg_utils_cmd_begin;
+  PFN_vkCmdEndDebugUtilsLabelEXT dbg_utils_cmd_end;
+  PFN_vkCmdInsertDebugUtilsLabelEXT dbg_utils_cmd_insert;
+
+  PFN_vkDestroyDebugUtilsMessengerEXT dbg_destroy_utils_msg;
+  VkDebugUtilsMessengerEXT debug_utils_msg;
+
+  VkInstance instance;
+  VkSurfaceKHR surface;
+
+  uint32_t pdc;
+  struct _pd_data {
+    VkPhysicalDevice phys_dev;
+    uint32_t gfam_idx;
+    uint32_t tfam_idx;
+    uint32_t cfam_idx;
+  } *pd_data;
+
+  uint32_t ldc;
+  struct _ld_data {
+    VkQueue graphics;
+    VkQueue transfer;
+    VkQueue compute;
+    VkDevice device;
+    uint32_t pdi;
+  } *ld_data;
+
+  uint32_t sdc;
+  struct _sc_data {
+    uint32_t sic;
+    VkSwapchainKHR swap_chain;
+    struct _swap_chain_buffers {
+      VkImage image;
+      VkImageView view;
+      VkFramebuffer fb;
+    } *sc_buffs;
+
+    struct _synchronizers {
+      struct {
+        VkFence image;
+        VkFence render;
+      } fence;
+
+      struct {
+        VkSemaphore image;
+        VkSemaphore render;
+      } sem;
+    } *syncs;
+
+    struct _depth_buffer {
+      VkImage image;
+      VkImageView view;
+      VkDeviceMemory mem;
+    } depth;
+
+    uint32_t ldi;
+  } *sc_data;
+
+  struct _gp_cache {
+    VkPipelineCache pipe_cache;
+
+    uint32_t ldi;
+  } gp_cache;
+
+  uint32_t gdc;
+  struct _gp_data {
+    VkRenderPass render_pass;
+    VkPipelineLayout pipeline_layout;
+    uint32_t gpc;
+    VkPipeline *graphics_pipelines;
+
+    uint32_t ldi;
+  } *gp_data;
+
+  uint32_t cdc;
+  struct _cmd_data {
+    VkCommandPool cmd_pool;
+    VkCommandBuffer *cmd_buffs;
+
+    uint32_t ldi;
+  } *cmd_data;
+
+  uint32_t bdc;
+  struct _buff_data {
+    VkBuffer buff;
+    VkDeviceMemory mem;
+    VkDeviceSize size;
+
+    uint32_t ldi;
+  } *buff_data;
+
+  uint32_t ddc;
+  struct _desc_data {
+    VkDescriptorPool desc_pool;
+    uint32_t dlsc;
+    VkDescriptorSetLayout *layouts;
+    VkDescriptorSet *desc_set;
+
+    uint32_t ldi;
+  } *desc_data;
+  
+  uint32_t tdc;
+  struct _text_data {
+    VkImage image;
+    VkImageView view;
+    VkDeviceMemory mem;
+    VkSampler sampler;
+
+    uint32_t ldi;
+  } *text_data;
+
+  uint32_t dpc;
+  struct _dis_data {
+    VkDisplayPropertiesKHR props;
+  } *dis_data;
+} vkcomp;
+----
+
+== MEMBERS
+
+* *dbg_utils_queue_begin*: a function pointer used in the starting of a VkQueue debug label region. Basically allows you to debug your queue.
+* *dbg_utils_queue_end*: a function pointer used in the closing of a VkQueue debug label region.
+* *dbg_utils_queue_insert*: a function pointer used in the insertion of a link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsLabelEXT.html[VkDebugUtilsLabelEXT] debug label into a VkQueue.
+* *dbg_utils_cmd_begin*: a function pointer used in the starting of a VkCommandBuffer debug label region. Basically allows you to debug command buffers.
+* *dbg_utils_cmd_end*: a function pointer used in the closing of a VkCommandBuffer debug label region.
+* *dbg_utils_cmd_insert*: a function pointer used in the insertion of a link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsLabelEXT.html[VkDebugUtilsLabelEXT] debug label into a VkCommandBuffer.
+* *dbg_destroy_utils_msg*: a function pointer used in the destruction of an exposed VkDebugUtilsMessengerEXT handle/object.
+* *debug_utils_msg*: an exposed VkDebugUtilsMessengerEXT handle/object that allows for lucurious API to change callback output (i.e. validation layer output).
+* *instance*: a VkInstance handle used in the association of having a connection to the Vulkan API and storing all per application state
+
+== DESCRIPTION
+
+N/A.
+
+== SEE ALSO
+
+link:../../api/vkcomp/dlu_init_vk.html[dlu_init_vk(3)]
+link:../../api/vkcomp/dlu_freeup_vk.html[dlu_freeup_vk(3)]
+link:../../api/vkcomp/dlu_set_debug_message.html[dlu_set_debug_message(3)]
+link:../../api/vkcomp/dlu_set_device_debug_ext.html[dlu_set_device_debug_ext(3)]
+link:../../api/vkcomp/dlu_create_instance.html[dlu_create_instance(3)]
+
+== Author
+
+Vincent Davis Jr.

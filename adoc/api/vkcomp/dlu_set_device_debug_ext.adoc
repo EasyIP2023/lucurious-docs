@@ -1,0 +1,52 @@
+:stylesheet: ../../../css/rubygems.css
+:stylesheet: ../../../css/asciidoctor.css
+:stylesheet: ../../../css/asciidoctor.min.css
+
+link:../../index.html[home]
+
+== dlu_set_device_debug_ext(3)
+
+== BRIEF DESCRIPTION
+
+**dlu_set_device_debug_ext** - allows API to assign functions to function pointers used in the debugging process. 
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
+VkResult dlu_set_device_debug_ext(
+  vkcomp *app,
+  uint32_t cur_ld
+);
+----
+
+== PARAMETERS
+
+* *app*: A pointer to the link:../../structs/vkcomp/vkcomp.html[vkcomp(3)] structure.
+* *cur_ld*: Must pass the index of the current VkDevice (Logical Device). Preallocate devices with the use of link:../utils/dlu_otba.html[dlu_otba(3)].
+
+== DESCRIPTION
+
+When using this function you must make a call to link:dlu_create_logical_device.html[dlu_create_logical_device(3)]. The **dlu_set_device_debug_ext(3)**
+function basically acquires Vk*DebugUtilsLabelEXT function pointers. Thus, allowing for better debugging of Vulkan applications.
+
+== RETURN VALUES
+
+Upon success or failure function returns one of Vulkans link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResult.html[VkResult]
+enum constants. These result codes are used to indicate return status information and runtime errors.
+
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:../../structs/vkcomp/vkcomp.html[vkcomp(3)]
+link:../../cmd/lucur.html[lucur(1)]
+
+== AUTHOR
+
+Vincent Davis Jr.

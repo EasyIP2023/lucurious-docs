@@ -1,0 +1,48 @@
+:stylesheet: ../../../css/rubygems.css
+:stylesheet: ../../../css/asciidoctor.css
+:stylesheet: ../../../css/asciidoctor.min.css
+
+link:../../index.html[home]
+
+== dlu_freeup_vk(3)
+
+== BRIEF DESCRIPTION
+
+**dlu_freeup_vk** - Frees vkcomp memory
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
+void dlu_freeup_vk(vkcomp *app);
+----
+
+== PARAMETERS
+
+* **app**: A pointer to the link:../../structs/vkcomp/vkcomp.html[vkcomp(3)] structure.
+
+## DESCRIPTION
+
+The **dlu_freeup_vk(3)** function free's up any memory if allocate that belongs to the vkcomp
+pointer variable viewable in link:../../structs/vkcomp/vkcomp.html[vkcomp(3)]. Most memory free'd
+here are cached vulkan handles.
+
+## RETURN VALUES
+
+N/A.
+
+## BUGS
+
+N/A.
+
+## SEE ALSO
+
+link:../../structs/vkcomp/vkcomp.html[vkcomp(3)]
+link:dlu_init_vk.html[dlu_init_vk(3)]
+
+## AUTHOR
+
+Vincent Davis Jr.

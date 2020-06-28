@@ -1,0 +1,73 @@
+:stylesheet: ../css/rubygems.css
+:stylesheet: ../css/asciidoctor.css
+:stylesheet: ../css/asciidoctor.min.css
+
+:toc: left
+
+= Lucurious Docs
+
+////
+GIF taken from https://gmunk.com/OBLIVION-GFX)
+////
+
+image::../images/OBLVN_GFX_CHAN_01.gif[SyFy User Interfaces, align="center"]
+    
+image::https://img.shields.io/badge/license-MIT-brightgreen.svg[License]
+
+*Please feel free to correct or help me with anything in this documentation.*
+
+This is not official documentation. I am still currently and will continue to attempt to get vulkan to work cleanly with the sub-part of the DRM subsytem called KMS.
+I initially started thinking of how I wanted to implement lucurious as of February 2019. I was watching the t.v series The Expanse and was looking at how
+awesome the user interfaces looked. After thinking I realized that I’ve seen this done before in video games and in web browsers.
+
+So, what is lucurious? It is an *easy to use* library for building highly sophisticated and advanced Vulkan DRM renderers. These renderers allow for easy
+creation of interactable single application compositors that appear to be straight out of science fiction.
+
+== Useful Knowledge
+* Operating System Concepts
+* DRM/KMS Concepts
+* DRM functions calls 
+* Systemd Concepts
+
+== Examples and Usage
+* https://github.com/EasyIP2023/lucurious-examples[lucurious examples]
+
+== Command line tools
+* link:cmd/lucur.html[lucur(1)]
+
+== Structures
+=== vkcomp
+* link:structs/vkcomp/vkcomp.html[vkcomp(3)]
+
+=== utils
+* link:structs/utils/dlu_otma_mems.html[dlu_otma_mems(3)]
+
+=== drm
+* link:structs/drm/dlu_drm_core.html[dlu_drm_core(3)]
+
+== Enums
+=== vkcomp
+
+=== utils
+* link:enums/utils/dlu_block_type.html[dlu_block_type(3)]
+* link:enums/utils/dlu_data_type.html[dlu_data_type(3)]
+
+=== drm
+
+== API Calls
+=== vkcomp
+** link:api/vkcomp/dlu_set.html[dlu_set_*(3)]
+** link:api/vkcomp/dlu_set_debug_message.html[dlu_set_debug_message(3)]
+** link:api/vkcomp/dlu_set_device_debug_ext.html[dlu_set_device_debug_ext(3)]
+** link:api/vkcomp/dlu_init_vk.html[dlu_init_vk(3)]
+** link:api/vkcomp/dlu_freeup_vk.html[dlu_freeup_vk(3)]
+** link:api/vkcomp/dlu_create_instance.html[dlu_create_instance(3)]
+
+=== utils
+** link:api/utils/dlu_otma.html[dlu_otma(3)]
+** link:api/utils/dlu_otba.html[dlu_otba(3)]
+** link:api/utils/dlu_release_blocks.html[dlu_release_blocks(3)]
+
+=== drm
+** link:api/drm/dlu_drm_init_core.html[dlu_drm_init_core(3)]
+** link:api/drm/dlu_drm_freeup_core.html[dlu_drm_freeup_core(3)]

@@ -1,0 +1,94 @@
+:stylesheet: ../../../css/rubygems.css
+:stylesheet: ../../../css/asciidoctor.css
+:stylesheet: ../../../css/asciidoctor.min.css
+
+== dlu_drm_core(3)
+
+== BRIEF DESCRIPTION
+
+**dlu_drm_core** - a structure that allows for easy and better tracking of handles to low-level graphics API objects.
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_DRM_API
+#include <dluc/lucurious.h>
+
+typedef struct _dlu_drm_core {
+ 
+  uint32_t odbc;
+  struct _drm_buff_data {
+    uint32_t odid;
+    struct gbm_bo *bo;
+
+    bool in_use;
+  } *buff_data;
+
+  struct _device {
+    uint32_t kmsfd;
+
+    uint32_t vtfd;
+    uint32_t bkbm;
+
+    struct gbm_device *gbm_device;
+
+    uint32_t odc;
+    struct _output_data {
+      uint32_t modifiers_cnt;
+      uint32_t *modifiers;
+
+      char name[32];
+
+      uint32_t mode_blob_id;
+      drmModeModeInfo mode;
+      uint64_t refresh;
+
+      uint32_t pp_id;
+      uint32_t crtc_id;
+      uint32_t conn_id;
+      uint32_t enc_id;
+
+      drmModePlane *plane;
+      drmModeCrtc *crtc;
+      drmModeEncoder *enc;
+      drmModeConnector *conn;
+
+      struct {
+        struct drm_prop_info plane[DLU_DRM_PLANE__CNT];
+        struct drm_prop_info crtc[DLU_DRM_CRTC__CNT];
+        struct drm_prop_info conn[DLU_DRM_CONNECTOR__CNT];
+      } props;
+    } *output_data;
+  } device;
+
+  struct _logind {
+    sd_bus *bus;
+    char *id, *path;
+    bool has_drm;
+  } session;
+
+  struct _input {
+    uint32_t inpfd;
+    struct udev *udev;
+    struct libinput *inp;
+  } input;
+} dlu_drm_core;
+----
+
+== MEMBERS
+
+...
+
+== DESCRIPTION
+
+...
+
+== SEE ALSO
+
+link:../../api/drm/dlu_drm_init_core.html[dlu_drm_init_core(3)]
+link:../../api/drm/dlu_drm_freeup_core.html[dlu_drm_freeup_core(3)]
+
+== Author
+
+Vincent Davis Jr.

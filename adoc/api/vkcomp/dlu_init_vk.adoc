@@ -1,0 +1,46 @@
+:stylesheet: ../../../css/rubygems.css
+:stylesheet: ../../../css/asciidoctor.css
+:stylesheet: ../../../css/asciidoctor.min.css
+
+link:../../index.html[home]
+
+== dlu_init_vk(3)
+
+== BRIEF DESCRIPTION
+
+**dlu_init_vk** - This will return a pointer a vkcomp struct
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include> <dluc/lucurious.h>
+
+vkcomp *dlu_init_vk();
+----
+
+== PARAMETERS
+
+N/A.
+
+== DESCRIPTION
+
+This function returns a pointer of type link:../../structs/vkcomp/vkcomp.html[vkcomp(3)] (vulkan compositor) structure.
+
+== RETURN VALUES
+
+Upon failure dlu_init_vk returns **NULL**. Upon success an address to the starting member of the vkcomp structure.
+
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:../../structs/vkcomp/vkcomp.html[vkcomp(3)]
+link:dlu_freeup_vk.html[dlu_freeup_vk(3)]
+
+== AUTHOR
+
+Vincent Davis Jr.
