@@ -1,8 +1,8 @@
-:stylesheet: ../../../css/rubygems.css
-:stylesheet: ../../../css/asciidoctor.css
-:stylesheet: ../../../css/asciidoctor.min.css
+:stylesheet: ../css/rubygems.css
+:stylesheet: ../css/asciidoctor.css
+:stylesheet: ../css/asciidoctor.min.css
 
-link:../../index.html[home]
+link:index.html[home]
 
 == dlu_otma(3)
 
@@ -22,8 +22,8 @@ bool dlu_otma(
 
 == PARAMETERS
 
-* **type**: Specifies the type of block to allocate. See link:../../enums/utils/dlu_block_type.html[dlu_block_type(3)] for more details.
-* **ma**: Structure that helps specify the exact amount bytes to allocate. See link:../../structs/utils/dlu_otma_mems.html[dlu_otma_mems(3)]
+* **type**: Specifies the type of block to allocate. See link:dlu_block_type.html[dlu_block_type(3)] for more details.
+* **ma**: Structure that helps specify the exact amount bytes to allocate. See link:dlu_otma_mems.html[dlu_otma_mems(3)]
 for more details.
 
 == DESCRIPTION
@@ -44,8 +44,8 @@ N/A.
 
 link:dlu_otba.html[dlu_otba(3)]
 link:dlu_release_blocks.html[dlu_release_blocks(3)]
-link:../../structs/utils/dlu_otma_mems.html[dlu_otma_mems(3)]
-link:../../enums/utils/dlu_block_type.html[dlu_block_type(3)]
+link:dlu_otma_mems.html[dlu_otma_mems(3)]
+link:dlu_block_type.html[dlu_block_type(3)]
 
 == AUTHOR
 

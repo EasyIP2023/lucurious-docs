@@ -1,0 +1,73 @@
+:stylesheet: ../css/rubygems.css
+:stylesheet: ../css/asciidoctor.css
+:stylesheet: ../css/asciidoctor.min.css
+
+link:index.html[home]
+
+== dlu_create_logical_device(3)
+
+== BRIEF DESCRIPTION
+
+*dlu_create_logical_device* - a wrapper function that creates a VkDevice handle to interface with a given physical device.
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
+VkResult dlu_create_logical_device(
+  vkcomp *app,
+  uint32_t cur_ld,
+  uint32_t cur_pd,
+  VkDeviceCreateFlags flags,
+  uint32_t queueCreateInfoCount,
+  const VkDeviceQueueCreateInfo *pQueueCreateInfos,
+  VkPhysicalDeviceFeatures *pEnabledFeatures,
+  uint32_t enabledExtensionCount,
+  const char *const *ppEnabledExtensionNames
+);
+----
+
+== PARAMETERS
+
+* *app*: A pointer to the link:vkcomp.html[vkcomp(3)] structure.
+* *cur_ld*: Current logical device. Selects which element in the (*struct _ld_data*) array to do operations with. link:vkcomp.html[vkcomp(3)]
+* *cur_pd*: Current physical device. Selects which element in the (*struct _pd_data*) array to do operations with. link:vkcomp.html[vkcomp(3)]   
+* *flags*: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfo.html[VkDeviceCreateInfo] structure and is
+reserved for future usage.
+* *queueCreateInfoCount*: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfohtml[VkDeviceCreateInfo] structure used to pass
+the number of device queues to create with a given logical device.
+* *pQueueCreateInfos*: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfo.html[VkDeviceCreateInfo] structure used to pass
+information about device queues to create with a given logical device. Only three queues are supported graphics, transfer, and compute queues.
+* *pEnabledFeatures*: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfohtml[VkDeviceCreateInfo] structure used to pass
+the features one wants to enable if supported by a given logical device.
+* *enabledExtensionCount*: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfo.html[VkDeviceCreateInfo] structure used to pass
+the the number of device extensions one wants to enable. 
+* *ppEnabledExtensionNames*: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInstanceCreateInfo.html[VkInstanceCreateInfo] structure used to pass
+the actual Vulkan device extensions one wants to enable. See link:lucur.html[lucur(1)] for details of device extensions.
+
+== DESCRIPTION
+
+The *dlu_create_logical_device(3)* creates a link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDevice.html[VkDevice] handle and allows a connection to a
+given physical device. The VkDevice handle is more of a local object its state and operations are local to it and not seen by other logical devices. It also acts as an easy wrapper that allows
+one to define device extensions. Device extensions basically allow developers to define what operations a given logical device is capable of doing. So, if one wants the device to be capable
+of utilizing a swap chain, etc... One should enable those extensions inorder to gain access to those particular capabilities.
+
+== RETURN VALUES
+
+Upon success or failure function returns one of Vulkans link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResult.html[VkResult]
+enum constants. These result codes are used to indicate return status information and runtime errors.
+
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:vkcomp.html[vkcomp(3)]
+
+== AUTHOR
+
+Vincent Davis Jr.

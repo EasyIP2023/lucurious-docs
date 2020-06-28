@@ -1,8 +1,8 @@
-:stylesheet: ../../../css/rubygems.css
-:stylesheet: ../../../css/asciidoctor.css
-:stylesheet: ../../../css/asciidoctor.min.css
+:stylesheet: ../css/rubygems.css
+:stylesheet: ../css/asciidoctor.css
+:stylesheet: ../css/asciidoctor.min.css
 
-link:../../index.html[home]
+link:index.html[home]
 
 == dlu_drm_init_core(3)
 
@@ -26,12 +26,12 @@ N/A.
 
 == DESCRIPTION
 
-This function returns a pointer of type link:../../structs/drm/dlu_drm_core.html[dlu_drm_core(3)] structure.
+This function returns a pointer of type link:dlu_drm_core.html[dlu_drm_core(3)] structure.
 
 == RETURN VALUES
 
 Upon failure dlu_drm_core returns **NULL**. Upon success an address to the starting member of the
-link:../../structs/drm/dlu_drm_core.html[dlu_drm_core(3)] structure.
+link:dlu_drm_core.html[dlu_drm_core(3)] structure.
 
 == BUGS
 
@@ -39,7 +39,7 @@ N/A.
 
 == SEE ALSO
 
-link:../../structs/drm/dlu_drm_core.html[dlu_drm_core(3)]
+link:dlu_drm_core.html[dlu_drm_core(3)]
 link:dlu_drm_freeup_core.html[dlu_drm_freeup_core(3)]
 
 == AUTHOR

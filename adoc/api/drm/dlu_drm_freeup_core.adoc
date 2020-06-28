@@ -1,8 +1,8 @@
-:stylesheet: ../../../css/rubygems.css
-:stylesheet: ../../../css/asciidoctor.css
-:stylesheet: ../../../css/asciidoctor.min.css
+:stylesheet: ../css/rubygems.css
+:stylesheet: ../css/asciidoctor.css
+:stylesheet: ../css/asciidoctor.min.css
 
-link:../../index.html[home]
+link:index.html[home]
 
 == dlu_drm_freeup_core(3)
 
@@ -22,13 +22,13 @@ void dlu_drm_freeup_core(dlu_drm_core *core);
 
 == PARAMETERS
 
-* **core**: A pointer to the link:../../structs/drm/dlu_drm_core.html[dlu_drm_core] structure.
+* **core**: A pointer to the link:dlu_drm_core.html[dlu_drm_core] structure.
 
 == DESCRIPTION
 
 The **dlu_drm_freeup_core(3)** function free's up any memory if allocate that belongs to the
-link:../../structs/drm/dlu_drm_core.html[dlu_drm_core(3)] structure. It also releases active logind
-session on the active KMS node/DRM device.
+link:dlu_drm_core.html[dlu_drm_core(3)] structure. It also releases active logind session on the
+active KMS node/DRM device.
 
 == RETURN VALUES
 
@@ -40,7 +40,7 @@ N/A.
 
 == SEE ALSO
 
-link:../../structs/drm/dlu_drm_core.html[dlu_drm_core(3)]
+link:dlu_drm_core.html[dlu_drm_core(3)]
 link:dlu_drm_init_core.html[dlu_drm_init_core(3)]
 
 ## AUTHOR

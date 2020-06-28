@@ -1,14 +1,14 @@
-:stylesheet: ../../../css/rubygems.css
-:stylesheet: ../../../css/asciidoctor.css
-:stylesheet: ../../../css/asciidoctor.min.css
+:stylesheet: ../css/rubygems.css
+:stylesheet: ../css/asciidoctor.css
+:stylesheet: ../css/asciidoctor.min.css
 
-link:../../index.html[home]
+link:index.html[home]
 
 == dlu_otma_mems(3)
 
 == BRIEF DESCRIPTION
 
-**dlu_otma_mems** - a structure for defining byte allocation.
+*dlu_otma_mems* - a structure for defining byte allocation.
 
 == C SPECIFICATION
 
@@ -83,8 +83,8 @@ Most if not all information needed for preallocation can be acquired by running 
 
 == SEE ALSO
 
-link:../../api/utils/dlu_otma.html[dlu_otma(3)]
-link:../../api/utils/dlu_otba.html[dlu_otba(3)]
+link:dlu_otma.html[dlu_otma(3)]
+link:dlu_otba.html[dlu_otba(3)]
 
 == AUTHOR
 

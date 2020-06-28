@@ -1,14 +1,14 @@
-:stylesheet: ../../../css/rubygems.css
-:stylesheet: ../../../css/asciidoctor.css
-:stylesheet: ../../../css/asciidoctor.min.css
+:stylesheet: ../css/rubygems.css
+:stylesheet: ../css/asciidoctor.css
+:stylesheet: ../css/asciidoctor.min.css
 
-link:../../index.html[home]
+link:index.html[home]
 
 == dlu_set_device_debug_ext(3)
 
 == BRIEF DESCRIPTION
 
-**dlu_set_device_debug_ext** - allows API to assign functions to function pointers used in the debugging process. 
+*dlu_set_device_debug_ext* - allows API to assign functions to function pointers used in the debugging process. 
 
 == C SPECIFICATION
 
@@ -25,8 +25,8 @@ VkResult dlu_set_device_debug_ext(
 
 == PARAMETERS
 
-* *app*: A pointer to the link:../../structs/vkcomp/vkcomp.html[vkcomp(3)] structure.
-* *cur_ld*: Must pass the index of the current VkDevice (Logical Device). Preallocate devices with the use of link:../utils/dlu_otba.html[dlu_otba(3)].
+* *app*: A pointer to the link:vkcomp.html[vkcomp(3)] structure.
+* *cur_ld*: Must pass the index of the current VkDevice (Logical Device). Preallocate devices with the use of link:dlu_otba.html[dlu_otba(3)].
 
 == DESCRIPTION
 
@@ -44,8 +44,8 @@ N/A.
 
 == SEE ALSO
 
-link:../../structs/vkcomp/vkcomp.html[vkcomp(3)]
-link:../../cmd/lucur.html[lucur(1)]
+link:vkcomp.html[vkcomp(3)]
+link:lucur.html[lucur(1)]
 
 == AUTHOR
 

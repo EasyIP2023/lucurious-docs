@@ -1,12 +1,14 @@
-:stylesheet: ../../../css/rubygems.css
-:stylesheet: ../../../css/asciidoctor.css
-:stylesheet: ../../../css/asciidoctor.min.css
+:stylesheet: ../css/rubygems.css
+:stylesheet: ../css/asciidoctor.css
+:stylesheet: ../css/asciidoctor.min.css
+
+link:index.html[home]
 
 == dlu_drm_core(3)
 
 == BRIEF DESCRIPTION
 
-**dlu_drm_core** - a structure that allows for easy and better tracking of handles to low-level graphics API objects.
+*dlu_drm_core* - a structure that allows for easy and better tracking of handles to low-level linux graphics API objects.
 
 == C SPECIFICATION
 
@@ -86,8 +88,8 @@ typedef struct _dlu_drm_core {
 
 == SEE ALSO
 
-link:../../api/drm/dlu_drm_init_core.html[dlu_drm_init_core(3)]
-link:../../api/drm/dlu_drm_freeup_core.html[dlu_drm_freeup_core(3)]
+link:dlu_drm_init_core.html[dlu_drm_init_core(3)]
+link:dlu_drm_freeup_core.html[dlu_drm_freeup_core(3)]
 
 == Author
 

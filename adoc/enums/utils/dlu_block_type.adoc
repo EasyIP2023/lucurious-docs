@@ -1,14 +1,14 @@
-:stylesheet: ../../../css/rubygems.css
-:stylesheet: ../../../css/asciidoctor.css
-:stylesheet: ../../../css/asciidoctor.min.css
+:stylesheet: ../css/rubygems.css
+:stylesheet: ../css/asciidoctor.css
+:stylesheet: ../css/asciidoctor.min.css
 
-link:../../index.html[home]
+link:index.html[home]
 
 == dlu_block_type(3)
 
 == BRIEF DESCRIPTION
 
-**dlu_block_type** - an enum to specify a type of block of memory.
+*dlu_block_type* - an enum to specify a type of block of memory.
 
 == C SPECIFICATION
 
@@ -24,12 +24,12 @@ typedef enum _dlu_block_type {
 
 == MEMBERS
 
-* **DLU_LARGE_BLOCK_PRIV**: Enum value for specifying a large private block of memory.
-* **DLU_SMALL_BLOCK_PRIV**: Enum value for specifying a small private block of memory. This value is be passed when link:../../api/utils/dlu_otba.html[dlu_otba(3)]
+* *DLU_LARGE_BLOCK_PRIV*: Enum value for specifying a large private block of memory.
+* *DLU_SMALL_BLOCK_PRIV*: Enum value for specifying a small private block of memory. This value is be passed when link:dlu_otba.html[dlu_otba(3)]
 sub allocates blocks of memory.
-* **DLU_LARGE_BLOCK_SHARED**: Enum value for specifying a large shared block of memory. **Currently not in use**
-* **DLU_SMALL_BLOCK_SHARED**: Enum value for specifying a small shared block of memory. This value is be passed when link:../../api/utils/dlu_otba.html[dlu_otba(3)]
-sub allocates blocks of memory. **Currently not in use**
+* *DLU_LARGE_BLOCK_SHARED*: Enum value for specifying a large shared block of memory. *Currently not in use*
+* *DLU_SMALL_BLOCK_SHARED*: Enum value for specifying a small shared block of memory. This value is be passed when link:dlu_otba.html[dlu_otba(3)]
+sub allocates blocks of memory. *Currently not in use*
 
 == DESCRIPTION
 
@@ -37,8 +37,8 @@ This enum allows for specifying the exact type of memory to initially allocate a
 
 ## SEE ALSO
 
-link:../../api/utils/dlu_otma.html[dlu_otma(3)]
-link:../../api/utils/dlu_otba.html[dlu_otba(3)]
+link:dlu_otma.html[dlu_otma(3)]
+link:dlu_otba.html[dlu_otba(3)]
 
 ## AUTHOR
 

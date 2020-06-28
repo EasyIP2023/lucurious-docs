@@ -1,8 +1,8 @@
-:stylesheet: ../../../css/rubygems.css
-:stylesheet: ../../../css/asciidoctor.css
-:stylesheet: ../../../css/asciidoctor.min.css
+:stylesheet: ../css/rubygems.css
+:stylesheet: ../css/asciidoctor.css
+:stylesheet: ../css/asciidoctor.min.css
 
-link:../../index.html[home]
+link:index.html[home]
 
 == dlu_data_type(3)
 
@@ -51,9 +51,10 @@ typedef enum _dlu_data_type {
 
 == DESCRIPTION
 
-The **dlu_data_type** enum constants must be passed to link:../../api/utils/dlu_otba.html[dlu_otba(3)] this choses which link:../../structs/vkcomp/vkcomp.html[vkcomp(3)]
-structure member one wants to allocate. You must specify the amount of elements with link:../../structs/utils/dlu_otma_mems.html[dlu_otma_mems(3)]. I wrote this becuase early
-on I saw that handles that store references to objects that low-level APIs manipulate could be preallocated and their addresses reused.
+The *dlu_data_type* enum constants must be passed to link:dlu_otba.html[dlu_otba(3)] this choses which link:vkcomp.html[vkcomp(3)]
+structure member one wants to allocate. You must specify the amount of elements with link:dlu_otma_mems.html[dlu_otma_mems(3)].
+I wrote this becuase early on I saw that handles that store references to objects that low-level APIs manipulate could be preallocated
+and their addresses reused.
 
 == BUGS
 
@@ -61,10 +62,10 @@ N/A.
 
 == SEE ALSO
 
-link:../../structs/vkcomp/vkcomp.html[vkcomp(3)]
-link:../../structs/drm/dlu_drm_core.html[dlu_drm_core(3)]
-link:../../structs/utils/dlu_otma_mems.html[dlu_otma_mems(3)]
-link:../../api/utils/dlu_otba.html[dlu_otba(3)]
+link:vkcomp.html[vkcomp(3)]
+link:dlu_drm_core.html[dlu_drm_core(3)]
+link:dlu_otma_mems.html[dlu_otma_mems(3)]
+link:dlu_otba.html[dlu_otba(3)]
 
 == AUTHOR
 

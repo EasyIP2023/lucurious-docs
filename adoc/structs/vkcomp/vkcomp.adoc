@@ -1,12 +1,14 @@
-:stylesheet: ../../../css/rubygems.css
-:stylesheet: ../../../css/asciidoctor.css
-:stylesheet: ../../../css/asciidoctor.min.css
+:stylesheet: ../css/rubygems.css
+:stylesheet: ../css/asciidoctor.css
+:stylesheet: ../css/asciidoctor.min.css
+
+link:index.html[home]
 
 == vkcomp(3)
 
 == BRIEF DESCRIPTION
 
-**vkcomp** - a structure that allows for easy and better tracking of handles to objects that vulkan manipulates for you.
+*vkcomp* - a structure that allows for easy and better tracking of handles to objects that vulkan manipulates for you.
 
 == C SPECIFICATION
  
@@ -155,11 +157,11 @@ N/A.
 
 == SEE ALSO
 
-link:../../api/vkcomp/dlu_init_vk.html[dlu_init_vk(3)]
-link:../../api/vkcomp/dlu_freeup_vk.html[dlu_freeup_vk(3)]
-link:../../api/vkcomp/dlu_set_debug_message.html[dlu_set_debug_message(3)]
-link:../../api/vkcomp/dlu_set_device_debug_ext.html[dlu_set_device_debug_ext(3)]
-link:../../api/vkcomp/dlu_create_instance.html[dlu_create_instance(3)]
+link:dlu_init_vk.html[dlu_init_vk(3)]
+link:dlu_freeup_vk.html[dlu_freeup_vk(3)]
+link:dlu_set_debug_message.html[dlu_set_debug_message(3)]
+link:dlu_set_device_debug_ext.html[dlu_set_device_debug_ext(3)]
+link:dlu_create_instance.html[dlu_create_instance(3)]
 
 == Author
 

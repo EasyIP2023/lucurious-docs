@@ -1,14 +1,14 @@
-:stylesheet: ../../../css/rubygems.css
-:stylesheet: ../../../css/asciidoctor.css
-:stylesheet: ../../../css/asciidoctor.min.css
+:stylesheet: ../css/rubygems.css
+:stylesheet: ../css/asciidoctor.css
+:stylesheet: ../css/asciidoctor.min.css
 
-link:../../index.html[home]
+link:index.html[home]
 
 == dlu_init_vk(3)
 
 == BRIEF DESCRIPTION
 
-**dlu_init_vk** - This will return a pointer a vkcomp struct
+*dlu_init_vk* - This will return a pointer a vkcomp struct
 
 == C SPECIFICATION
 
@@ -26,11 +26,11 @@ N/A.
 
 == DESCRIPTION
 
-This function returns a pointer of type link:../../structs/vkcomp/vkcomp.html[vkcomp(3)] (vulkan compositor) structure.
+This function returns a pointer of type link:vkcomp.html[vkcomp(3)] (vulkan compositor) structure.
 
 == RETURN VALUES
 
-Upon failure dlu_init_vk returns **NULL**. Upon success an address to the starting member of the vkcomp structure.
+Upon failure dlu_init_vk returns *NULL*. Upon success an address to the starting member of the vkcomp structure.
 
 == BUGS
 
@@ -38,7 +38,7 @@ N/A.
 
 == SEE ALSO
 
-link:../../structs/vkcomp/vkcomp.html[vkcomp(3)]
+link:vkcomp.html[vkcomp(3)]
 link:dlu_freeup_vk.html[dlu_freeup_vk(3)]
 
 == AUTHOR

@@ -1,0 +1,60 @@
+:stylesheet: ../css/rubygems.css
+:stylesheet: ../css/asciidoctor.css
+:stylesheet: ../css/asciidoctor.min.css
+
+link:index.html[home]
+
+== dlu_create_physical_device(3)
+
+== BRIEF DESCRIPTION
+
+*dlu_create_physical_device* - a wrapper function that creates a VkPhysicalDevice handle.
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
+VkResult dlu_create_physical_device(
+  vkcomp *app,
+  uint32_t cur_pd,
+  VkPhysicalDeviceType vkpdtype,
+  VkPhysicalDeviceProperties *device_props,
+  VkPhysicalDeviceFeatures *device_feats
+);
+----
+
+== PARAMETERS
+
+* *app*: A pointer to the link:vkcomp.html[vkcomp(3)] structure.
+* *cur_pd*: Current physical device. Selects which element in the (*struct _pd_data*) array to do operations with. link:vkcomp.html[vkcomp(3)]   
+* *vkpdtype*: A link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceType.html[VkPhysicalDeviceType] enum used to select what
+physical device to utilize in a given application.
+* *device_props*: A link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProperties.html[VkPhysicalDeviceProperties] structure passed
+to the function and assigned queried properties for a given physical device.
+* *device_feats*: A link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures.html[VkPhysicalDeviceFeatures] structure passed
+to the function and assigned queried features for a given physical device.
+
+== DESCRIPTION
+
+The *dlu_create_physical_device(3)* creates a link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice.html[VkPhysicalDevice] handle to query surface
+capabilities and inerface with the hardware. This is more of a global object. It's state is shared with multiple logical devices created with link:dlu_create_logical_device.html[dlu_create_logical_device]. 
+
+== RETURN VALUES
+
+Upon success or failure function returns one of Vulkans link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResult.html[VkResult]
+enum constants. These result codes are used to indicate return status information and runtime errors.
+
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:vkcomp.html[vkcomp(3)]
+
+== AUTHOR
+
+Vincent Davis Jr.

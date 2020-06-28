@@ -1,31 +1,31 @@
-:stylesheet: ../../css/rubygems.css
-:stylesheet: ../../css/asciidoctor.css
-:stylesheet: ../../css/asciidoctor.min.css
+:stylesheet: ../css/rubygems.css
+:stylesheet: ../css/asciidoctor.css
+:stylesheet: ../css/asciidoctor.min.css
 
-link:../../index.html[home]
+link:index.html[home]
 
 == Lucur(1)
 
 == BRIEF DESCRIPTION
 
-**lucur** - liblucurious command line tool
+*lucur* - liblucurious command line tool
 
 == SYNOPSIS
-**lucur** [options]
+*lucur* [options]
 
-**lucur** &mdash;pde VK_QUEUE_GRAPHICS_BIT
+*lucur* &mdash;pde VK_QUEUE_GRAPHICS_BIT
 
 == DESCRIPTION
 
-The **lucur** command line tool is used to assist in the construction of single application vulkan kms compositors
+The *lucur* command line tool is used to assist in the construction of single application vulkan kms compositors
 
 == OPTIONS
 
 === -l, &mdash;pgvl
 
 Prints a list of all global layers on a given system that can be activated and inserted into a vulkan commands call chain. With the key layer being the
-validation layer. All useful validation layers are bundled up into a layer called **VK_LAYER_KHRONOS_validation**. Vulkan validation layers are useful to enable when debugging
-code as it gives you a detailed output on what you did wrong. The ouput is mostly Vulkan Structure members whose data input were wrong **(validity errors)**. There are also **runtime errors**.
+validation layer. All useful validation layers are bundled up into a layer called *VK_LAYER_KHRONOS_validation*. Vulkan validation layers are useful to enable when debugging
+code as it gives you a detailed output on what you did wrong. The ouput is mostly Vulkan Structure members whose data input were wrong *(validity errors)*. There are also *runtime errors*.
 When these layers are enabled, it places itself within the repective vulkan command call chain and will detail any errors caused by wrongful practices. For an in depth debugging tutorial go to
 link:https://www.lunarg.com/wp-content/uploads/2018/05/Vulkan-Debug-Utils_05_18_v1.pdf[Vulkan Debug Utilities]
 
@@ -46,7 +46,7 @@ Print display devices list
 === &nbsp;&nbsp;&nbsp;&nbsp;&mdash;display-info `<drm device>`
 
 This will display any compatible (DRM Device/KMS Node) and it's capabilities. Mainly used to limit allocations and instruction
-execution when calling link:/api/drm/dlu_drm_kms_node_enum_ouput_dev.html[dlu_drm_kms_node_enum_ouput_dev(3)]. If no
+execution when calling link:dlu_drm_kms_node_enum_ouput_dev.html[dlu_drm_kms_node_enum_ouput_dev(3)]. If no
 preferred DRM device available cycle through all devices and display Plane -> CTRC -> Encoder -> Connector pairs. The argument for this flag is optional
 
 === -v, &mdash;version
@@ -58,7 +58,7 @@ Prints the current version of lucurious API
 Show help message.
 
 == BUGS
-When using the **&mdash;display-info** flag one must add include **=** if they want to specify the device they wish to query information from.
+When using the *&mdash;display-info* flag one must add include *=* if they want to specify the device they wish to query information from.
 I decided on making the option to choose which kms node you want to query information for optional.
 
 == AUTHOR
