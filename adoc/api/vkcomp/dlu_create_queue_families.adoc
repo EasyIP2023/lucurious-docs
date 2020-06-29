@@ -1,0 +1,58 @@
+:stylesheet: rubygems.css
+:stylesheet: asciidoctor.css
+:stylesheet: asciidoctor.min.css
+
+link:index.html[home]
+
+== dlu_create_queue_families(3)
+
+== BRIEF DESCRIPTION
+
+*dlu_create_queue_families* - a wrapper function that finds the queue family index of a given queue if it is supported on a particular physical device.
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
+VkBool32 dlu_create_queue_families(
+  vkcomp *app,
+  uint32_t cur_pd,
+  VkQueueFlagBits vkqfbits
+);
+----
+
+== PARAMETERS
+
+* *app*: A pointer to the link:vkcomp.html[vkcomp(3)] structure.
+* *cur_pd*: Current physical device. Selects which elements in the (*struct _pd_data*) array to do operations with. link:vkcomp.html[vkcomp(3)]   
+* *vkqfbits*: A link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlagBits.html[VkQueueFlagBits] enum that when
+utilized in *dlu_create_queue_families* allows for the checking and setting of queue families indices. One can do bit wise or operations with VkQueueFlagBits to select
+mulitple queues. 
+
+== DESCRIPTION
+
+Almost every operation in Vulkan, from submitting command buffers to presenting images to a surface, requires commands to be submitted to a hardware queue. The
+*dlu_create_queue_families(3)* creates queue family indices used during link:dlu_create_logical_device.html[dlu_create_logical_device(3)]. These queues are created when
+a given VkDevice is created.
+
+== RETURN VALUES
+
+Returns VK_TRUE upon failure.
+ 
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:vkcomp.html[vkcomp(3)]
+link:dlu_create_physical_device.html[dlu_create_physical_device(3)]
+link:dlu_create_logical_device.html[dlu_create_logical_device(3)]
+link:dlu_create_device_queue.html[dlu_create_device_queue(3)]
+
+== AUTHOR
+
+Vincent Davis Jr.

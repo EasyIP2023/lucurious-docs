@@ -1,0 +1,60 @@
+:stylesheet: rubygems.css
+:stylesheet: asciidoctor.css
+:stylesheet: asciidoctor.min.css
+
+link:index.html[home]
+
+==  dlu_create_device_queue(3)
+
+== BRIEF DESCRIPTION
+
+*dlu_create_device_queue* - a wrapper function that allows for the creating of multiple VkQueue handles to submit commands buffers to.
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
+VkBool32 dlu_create_device_queue(
+  vkcomp *app,
+  uint32_t cur_ld,
+  uint32_t queueIndex,
+  VkQueueFlagBits vkqfbits
+);
+----
+
+== PARAMETERS
+
+* *app*: A pointer to the link:vkcomp.html[vkcomp(3)] structure.
+* *cur_ld*: Current logical device. Selects which element in the (*struct _ld_data*) array to do operations with. link:vkcomp.html[vkcomp(3)]
+* *queueIndex*: See link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceQueue.html[vkGetDeviceQueue] for more
+info.
+* *vkqfbits*: A link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlagBits.html[VkQueueFlagBits] enum that when
+utilized in *dlu_create_device_queue* allows for the settings of VkQueue handles from a VkDevice. Lucurious only supports three queues the
+graphics, transfer, and compute queues. One can do bit wise or operations with VkQueueFlagBits to create mulitple VkQueue handles. 
+ 
+
+== DESCRIPTION
+
+The *dlu_create_device_queue(3)* function creates multiple VkQueue handles for a given logical device.
+
+
+== RETURN VALUES
+
+Returns VK_TRUE upon failure.
+
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:vkcomp.html[vkcomp(3)]
+link:dlu_create_logical_device.html[dlu_create_logical_device(3)]
+link:dlu_create_queue_families.html[dlu_create_queue_families(3)]
+
+== AUTHOR
+
+Vincent Davis Jr.

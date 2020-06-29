@@ -1,6 +1,6 @@
-:stylesheet: ../css/rubygems.css
-:stylesheet: ../css/asciidoctor.css
-:stylesheet: ../css/asciidoctor.min.css
+:stylesheet: rubygems.css
+:stylesheet: asciidoctor.css
+:stylesheet: asciidoctor.min.css
 
 link:index.html[home]
 
@@ -54,6 +54,7 @@ N/A.
 == SEE ALSO
 
 link:vkcomp.html[vkcomp(3)]
+link:dlu_create_instance.html[dlu_create_instance(3)]
 
 == AUTHOR
 
