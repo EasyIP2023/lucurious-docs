@@ -107,7 +107,6 @@ typedef struct _vkcomp {
   struct _buff_data {
     VkBuffer buff;
     VkDeviceMemory mem;
-    VkDeviceSize size;
 
     uint32_t ldi;
   } *buff_data;

@@ -31,6 +31,7 @@ creation of interactable single application compositors that appear to be straig
 
 == Examples and Usage
 * link:https://github.com/EasyIP2023/lucurious-examples[lucurious examples]
+* link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/html/chap14.html#interfaces-resources-layout[Vulkan Alignment Requirements]
 
 == Command line tools
 * link:lucur.html[lucur(1)]
