@@ -24,10 +24,10 @@ So, what is lucurious? It is an *easy to use* library for building highly sophis
 creation of interactable single application compositors that appear to be straight out of science fiction.
 
 == Useful Knowledge
-* Operating System Concepts
-* DRM/KMS Concepts
-* DRM functions calls 
+* link:os_concepts.html[Operating System Concepts]
+* link:https://www.mankier.com/7/drm-kms[DRM/KMS Concepts] 
 * Systemd Concepts
+* link:https://www.mankier.com/7/drm-memory[DRM/KMS Memory]
 
 == Examples and Usage
 * link:https://github.com/EasyIP2023/lucurious-examples[lucurious examples]
