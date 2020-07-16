@@ -31,7 +31,6 @@ typedef struct _dlu_otma_mems {
   uint32_t bd_cnt;
   uint32_t dd_cnt;
   uint32_t td_cnt;
-  uint32_t dis_cnt;
   uint32_t pd_cnt;
   uint32_t ld_cnt;
   uint32_t drmc_cnt;
@@ -64,7 +63,6 @@ VkBuffer, VkDeviceMemory, VkDeviceSize handles to allocate.
 VkDescriptorPool, VkDescriptorSetLayout, VkDescriptorSet handles to allocate.
 * **td_cnt**: Texture data count. Specifies the amount of (**struct _text_data**) bytes needed with respective information to allocate. The structure contains 
 VkImage, VkImageView, VkDeviceMemory, VkSampler handles to allocate.
-* **dis_cnt**: Display data count. More information later
 * **pd_cnt**: Physical data count. Specifies the amount of (**struct _pd_data**) bytes needed with respective information to allocate. Basically predefine the amount
 of VkPhysicalDevice handles one can utilize.
 * **ld_cnt**: Logical device data count. Specifies the amount of (**struct _ld_data**) bytes needed with respective information to allocate. Basically predefine the amount

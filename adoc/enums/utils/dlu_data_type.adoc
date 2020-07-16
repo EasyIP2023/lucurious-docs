@@ -21,9 +21,8 @@ typedef enum _dlu_data_type {
   DLU_BUFF_DATA = 0x0003,
   DLU_DESC_DATA = 0x0004,
   DLU_TEXT_DATA = 0x0005,
-  DLU_DIS_DATA = 0x0006,
-  DLU_PD_DATA = 0x0007,
-  DLU_LD_DATA = 0x0008,
+  DLU_PD_DATA = 0x0006,
+  DLU_LD_DATA = 0x0007,
   DLU_SC_DATA_MEMS = 0x0F01,
   DLU_DESC_DATA_MEMS = 0x0F02,
   DLU_GP_DATA_MEMS = 0x0F03,
@@ -40,7 +39,6 @@ typedef enum _dlu_data_type {
 * *DLU_BUFF_DATA*: select in vkcomp *(struct _buff_data)*. Important Buffer Data when creating a VkBuffer and moving vertex data into it.
 * *DLU_DESC_DATA*: select in vkcomp *(struct _desc_data)*. Important Descriptor Data.
 * *DLU_TEXT_DATA*: select in vkcomp *(struct _text_data)*:. Important Texture Data.
-* *DLU_DIS_DATA*: select in vkcomp *(struct _dis_data)*: Important Display Data. *This is still in progress*.
 * *DLU_PD_DATA*: select in vkcomp *(struct _pd_data)*: Important Physical Device Data.
 * *DLU_LD_DATA*: select in vkcomp *(struct _ld_data)*: Important Logical Device Data.
 * *DLU_SC_DATA_MEMS*: select in vkcomp the members of the *(struct _sc_data)*. Important SwapChain Data members which are pointer to structures themselves or just pointers.

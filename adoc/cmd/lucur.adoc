@@ -39,10 +39,6 @@ allow developers to describe what an application is setup to do. It also enables
 Prints a list of all physical device level vulkan extensions for a given system that can be activated. Basically device extensions
 allow developers to describe what a particular device does. It also enables the ability to utilize activated extension related vulkan function calls.
 
-=== &nbsp;&nbsp;&nbsp;&nbsp;&mdash;pdp <link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceType.html[VkPhysicalDeviceType]>
-
-Print display devices list
-
 === &nbsp;&nbsp;&nbsp;&nbsp;&mdash;display-info `<drm device>`
 
 This will display any compatible (DRM Device/KMS Node) and it's capabilities. Mainly used to limit allocations and instruction
