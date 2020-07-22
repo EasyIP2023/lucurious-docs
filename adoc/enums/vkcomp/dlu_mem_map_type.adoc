@@ -1,0 +1,39 @@
+:stylesheet: rubygems.css
+:stylesheet: asciidoctor.css
+:stylesheet: asciidoctor.min.css
+
+link:index.html[home]
+
+== dlu_mem_map_type(3)
+
+== BRIEF DESCRIPTION
+
+*dlu_mem_map_type* - an enum for specifying which resource to map memory to.
+
+== C SPECIFICATION
+
+[source,c]
+----
+typedef enum _dlu_mem_map_type {
+  DLU_VK_BUFFER = 0x0000,
+  DLU_TEXT_VK_IMAGE = 0x0001
+} dlu_mem_map_type;
+----
+
+== MEMBERS
+
+* *DLU_VK_BUFFER*: Enum constant specifying that a given application will map to a VkBuffer resource.
+* *DLU_TEXT_VK_IMAGE*: Enum constant specifying that a given application will map to a VkImage resource. Direct mapping to a texture image VkDeviceMemory object without the use of
+link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBufferToImage.html[vkCmdCopyBufferToImage(3)].
+
+== DESCRIPTION
+
+An enum that specifies which resources VkDeviceMemory object to map CPU visible data (i.e. arrays of floats, cartesian coordinate point data) memory to.
+
+## SEE ALSO
+
+link:dlu_vk_map_mem.html[dlu_vk_map_mem(3)]
+
+## AUTHOR
+
+Vincent Davis Jr.

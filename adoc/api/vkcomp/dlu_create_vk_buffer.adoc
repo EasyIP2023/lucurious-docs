@@ -1,0 +1,81 @@
+:stylesheet: rubygems.css
+:stylesheet: asciidoctor.css
+:stylesheet: asciidoctor.min.css
+
+link:index.html[home]
+
+== dlu_create_vk_buffer(3)
+
+== BRIEF DESCRIPTION
+
+*dlu_create_vk_buffer* - a wrapper that creates VkBuffer and VkDeviceMemory objects which allows for the mapping of data that the shader can read.
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
+VkResult dlu_create_vk_buffer(
+  vkcomp *app,
+  uint32_t cur_ld,
+  uint32_t cur_bd,
+  VkDeviceSize size,
+  VkBufferCreateFlagBits flags,
+  VkBufferUsageFlags usage,
+  VkSharingMode sharingMode,
+  uint32_t queueFamilyIndexCount,
+  const uint32_t *pQueueFamilyIndices,
+  VkMemoryPropertyFlags requirements_mask
+);
+----
+
+== PARAMETERS
+
+* *app*: A pointer to the link:vkcomp.html[vkcomp(3)] structure.
+* *cur_ld*: Current logical device. Selects which element in the (*struct _ld_data*) array to do operations with (link:vkcomp.html[vkcomp(3)]). This informations needs to be passed in order
+to associate a logical device with a VkBuffer and VkDeviceMemory.
+* *cur_bd*: Current buffer data. Selects which element in the (*struct _bd_data*) array to create VkBuffer and VkDeviceMemory objects (link:vkcomp.html[vkcomp(3)]).    
+* *size*: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateInfo.html[VkBufferCreateInfo] structure and is used to determine the size
+of a given VkBuffer. The VkDeviceMemory will either be the same size or larger depending on the queried memory properties size.
+* *flags*: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateFlagBits.html[VkBufferCreateFlag] enum used to determine any extra functionality
+one might do on a given VkBuffer.
+* *usage*: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlagBits.html[VkBufferUsageFlag] enum used to set what a given VkBuffer
+is capable of.
+* *sharingMode*: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSharingMode.html[VkSharingMode] enum used to pass how a VkBuffer is shared
+when accessed by multiple queue families.
+* *queueFamilyIndexCount*: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateInfo.html[VkBufferCreateInfo] structure used to pass
+the the number of queue families this buffer can use. Only matters if *VK_SHARING_MODE_CONCURRENT* is enabled.
+* *pQueueFamilyIndices*: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateInfo.html[VkBufferCreateInfo] structure used to pass
+the actual queue family indices that a given VkBuffer can access. Only matters if *VK_SHARING_MODE_CONCURRENT* is enabled.
+* *requirements_mask*: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlagBits.html[VkMemoryPropertyFlag] enum used to determine where
+a given VkBuffer and VkDeviceMemory resides in memory (VRAM, RAM, etc...).
+
+== DESCRIPTION
+
+image::vulkan-memory.jpeg[Vulkan Memory, align="center"]
+*Image was taken from link:https://www.fasterthan.life/blog/2017/7/13/i-am-graphics-and-so-can-you-part-4-[Dustin H. Land Blog Post]*
+
+The *dlu_create_vk_buffer(3)* function creates a VkBuffer object that is backed by a VkDeviceMemory object. This function queries a VkPhysicalDevice to check to see
+if the chosen *requirements_mask* is a good fit for the VkBuffer/VkDeviceMemory. This function also binds the entire VkDeviceMemory object to the entire VkBuffer object regardless
+of the size of a given VkBuffer. One can then use link:dlu_vk_map_mem.html[dlu_vk_map_mem(3)] which uses memcpy(3) to directly map data into the VkDeviceMemory object.
+Depending upon the set *requirements_mask* values link:dlu_vk_map_mem.html[dlu_vk_map_mem(3)] allowed usage may vary.
+
+== RETURN VALUES
+
+Upon success or failure function returns one of Vulkans link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResult.html[VkResult]
+enum constants. These result codes are used to indicate return status information and runtime errors.
+
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:vkcomp.html[vkcomp(3)]
+link:dlu_vk_map_mem.html[dlu_vk_map_mem(3)]
+
+== AUTHOR
+
+Vincent Davis Jr.

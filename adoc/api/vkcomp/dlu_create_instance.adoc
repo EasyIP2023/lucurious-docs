@@ -8,7 +8,7 @@ link:index.html[home]
 
 == BRIEF DESCRIPTION
 
-*dlu_create_instance* - a wrapper that creates a VkInstance handle and establish a connection to the Vulkan API
+*dlu_create_instance* - a wrapper that creates a VkInstance object and establish a connection to the Vulkan API
 
 == C SPECIFICATION
 
@@ -46,7 +46,7 @@ the actual Vulkan instance extensions one wants to enable. See link:lucur.html[l
 
 == DESCRIPTION
 
-The *dlu_create_instance(3)* creates a VkInstance handle and establishes a connection to the Vulkan API. It also acts as an easy wrapper
+The *dlu_create_instance(3)* creates a VkInstance object and establishes a connection to the Vulkan API. It also acts as an easy wrapper
 that allows one to define instance extensions. Instance extensions basically allow developers to define what an app is setup to do. So, if I
 want the application to work with wayland or X etc... One should enable those extensions inorder to gain access to those particular capabilities.
 

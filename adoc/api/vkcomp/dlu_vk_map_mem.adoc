@@ -1,0 +1,65 @@
+:stylesheet: rubygems.css
+:stylesheet: asciidoctor.css
+:stylesheet: asciidoctor.min.css
+
+link:index.html[home]
+
+== dlu_vk_map_mem(3)
+
+== BRIEF DESCRIPTION
+
+*dlu_vk_map_mem* - a function used in the mapping of CPU visible data to sections of VkDeviceMemory.
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
+VkResult dlu_vk_map_mem(
+  dlu_mem_map_type type,
+  vkcomp *app,
+  uint32_t cur_idx,
+  VkDeviceSize size,
+  void *data,
+  VkDeviceSize offset,
+  VkMemoryMapFlags flags
+);
+----
+
+== PARAMETERS
+
+* *type*: Specifies the type memory to map. Generally it's associated with a given link:vkcomp.html[vkcomp(3)] structure member (i.e _bd_data). See link:dlu_mem_map_type.html[dlu_mem_map_type(3)] for more details.
+* *app*: A pointer to the link:vkcomp.html[vkcomp(3)] structure.
+* *cur_idx*: Current index. Selects which element in the (*struct _bd_data*, *struct _text_data*) array to map data to a section of binded VkDeviceMemory (link:vkcomp.html[vkcomp(3)]).  
+* *size*: The size of a given set of data that needs to be mapped.
+* *data*: A pointer pointing to the starting address of a contiguous block of data.
+* *offset*:  Bytes specifying at what point in VkDeviceMemory to map CPU visible data.
+* *flags*: Must be 0 and is reserved for future use.
+
+== DESCRIPTION
+
+
+With any resource, an application needs to populate it with CPU visible data that a given shader can read and interpret. In order to get the CPU to have access to the memory, you need to map it with a call to
+link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkMapMemory.html[vkMapMemory(3)]. The *dlu_vk_map_mem(3)* function maps CPU visible data vertex and pixel data to Vulkan
+resources that are backed by VkDeviceMemory objects.
+
+== RETURN VALUES
+
+Upon success or failure function returns one of Vulkans link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResult.html[VkResult]
+enum constants. These result codes are used to indicate return status information and runtime errors.
+
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:vkcomp.html[vkcomp(3)]
+link:dlu_create_vk_buffer.html[dlu_create_vk_buffer(3)]
+link:dlu_mem_map_type.html[dlu_mem_map_type(3)] 
+
+== AUTHOR
+
+Vincent Davis Jr.

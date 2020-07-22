@@ -48,6 +48,7 @@ creation of interactable single application compositors that appear to be straig
 
 == Enums
 === vkcomp
+* link:dlu_mem_map_type.html[dlu_mem_map_type(3)] 
 
 === utils
 * link:dlu_block_type.html[dlu_block_type(3)]
@@ -67,6 +68,8 @@ creation of interactable single application compositors that appear to be straig
 * link:dlu_create_logical_device.html[dlu_create_logical_device(3)]
 * link:dlu_create_queue_families.html[dlu_create_queue_families(3)]
 * link:dlu_create_device_queue.html[dlu_create_device_queue(3)]
+* link:dlu_create_vk_buffer.html[dlu_create_vk_buffer(3)]
+* link:dlu_vk_map_mem.html[dlu_vk_map_mem(3)]
 
 === utils
 * link:dlu_otma.html[dlu_otma(3)]

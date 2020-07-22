@@ -1,6 +1,6 @@
 # Lucurious Documentation
 
-Lucurious use the ruby ```gem 'asciidoctor'``` to generate human written understandable documentation.
+Lucurious use the ruby ```gem 'asciidoctor'``` to generate documentation.
 
 **Documentation Generation**
 ```bash
