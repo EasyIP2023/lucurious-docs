@@ -18,6 +18,7 @@ link:index.html[home]
 #include <dluc/lucurious.h>
 
 typedef struct _vkcomp {
+
   PFN_vkQueueBeginDebugUtilsLabelEXT dbg_utils_queue_begin;
   PFN_vkQueueEndDebugUtilsLabelEXT dbg_utils_queue_end;
   PFN_vkQueueInsertDebugUtilsLabelEXT dbg_utils_queue_insert;
@@ -142,6 +143,7 @@ typedef struct _vkcomp {
 * *dbg_utils_cmd_begin*: a function pointer used in the starting of a VkCommandBuffer debug label region. Basically allows you to debug command buffers.
 * *dbg_utils_cmd_end*: a function pointer used in the closing of a VkCommandBuffer debug label region.
 * *dbg_utils_cmd_insert*: a function pointer used in the insertion of a link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsLabelEXT.html[VkDebugUtilsLabelEXT] debug label into a VkCommandBuffer.
+* *dbg_utils_set_object_name*: a function pointer used to associate a name with a given Vulkan resource. (i.e VkImage, VkBuffer).
 * *dbg_destroy_utils_msg*: a function pointer used in the destruction of an exposed VkDebugUtilsMessengerEXT handle/object.
 * *debug_utils_msg*: an exposed VkDebugUtilsMessengerEXT handle/object that allows for lucurious API to change callback output (i.e. validation layer output).
 * *instance*: a VkInstance handle used in the association of having a connection to the Vulkan API and storing all per application state

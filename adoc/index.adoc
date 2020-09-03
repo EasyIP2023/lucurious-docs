@@ -21,13 +21,17 @@ I initially started thinking of how I wanted to implement lucurious as of Februa
 awesome the user interfaces looked. After thinking I realized that I’ve seen this done before in video games and in web browsers.
 
 So, what is lucurious? It is an *easy to use* library for building highly sophisticated and advanced Vulkan DRM renderers. These renderers allow for easy
-creation of interactable single application compositors that appear to be straight out of science fiction.
+creation of interactable single application compositors that appear to be straight out of science fiction. This API is meant to very tightly coupled. When I was
+first building it, I figured it would make it easier to keep track of FD's and vulkan handles.
 
 == Useful Knowledge
 * link:os_concepts.html[Operating System Concepts]
 * link:https://www.mankier.com/7/drm-kms[DRM/KMS Concepts] 
 * Systemd Concepts
 * link:https://www.mankier.com/7/drm-memory[DRM/KMS Memory]
+* link:https://01.org/linuxgraphics/gfx-docs/drm/gpu/drm-mm.html[DRM Memory Management]
+* link:https://docs.nvidia.com/drive/nvvib_docs/NVIDIA%20DRIVE%20Linux%20SDK%20Development%20Guide/baggage/group__direct__rendering__manager.html[NVIDIA DRM Docs]
+* link:https://lwn.net/Articles/283798[GEM **(Outdated)**]
 
 == Examples and Usage
 * link:https://github.com/EasyIP2023/lucurious-examples[lucurious examples]

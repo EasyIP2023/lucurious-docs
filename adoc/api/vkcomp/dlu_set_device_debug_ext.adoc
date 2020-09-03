@@ -30,8 +30,11 @@ VkResult dlu_set_device_debug_ext(
 
 == DESCRIPTION
 
-When using this function you must make a call to link:dlu_create_logical_device.html[dlu_create_logical_device(3)]. The **dlu_set_device_debug_ext(3)**
-function basically acquires Vk*DebugUtilsLabelEXT function pointers. Thus, allowing for better debugging of Vulkan applications.
+When using this function you must make a call to link:dlu_create_logical_device.html[dlu_create_logical_device(3)] first. The **dlu_set_device_debug_ext(3)**
+function basically acquires Vk*DebugUtilsLabelEXT function addresses. Thus, allowing for better debugging of Vulkan applications.
+
+For example usage go to link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_debug_utils.html[VK_EXT_debug_utils] and
+link:https://www.lunarg.com/wp-content/uploads/2018/05/Vulkan-Debug-Utils_05_18_v1.pdf[Vulkan Debug Utilities]
 
 == RETURN VALUES
 
