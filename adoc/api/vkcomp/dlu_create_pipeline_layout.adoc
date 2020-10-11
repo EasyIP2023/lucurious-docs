@@ -1,0 +1,66 @@
+:stylesheet: rubygems.css
+:stylesheet: asciidoctor.css
+:stylesheet: asciidoctor.min.css
+
+link:index.html[home]
+
+== dlu_create_pipeline_layout(3)
+
+== BRIEF DESCRIPTION
+
+*dlu_create_pipeline_layout* - a wrapper that creates a VkPipelineLayout object that the graphics pipeline will use to understand what resources are needed at a given pipeline stage to create the final image.
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
+VkResult dlu_create_pipeline_layout(
+  vkcomp *app,
+  uint32_t cur_ld,
+  uint32_t cur_gpd,
+  uint32_t layout_count,
+  VkDescriptorSetLayoutCreateInfo *layouts_info,
+  uint32_t pushConstantRangeCount,
+  const VkPushConstantRange *pPushConstantRanges,
+  VkPipelineLayoutCreateFlags flags
+);
+----
+
+== PARAMETERS
+
+* *app*: A pointer to the link:vkcomp.html[vkcomp(3)] structure.
+* *cur_ld*: Current logical device. Selects which element in the (*struct _ld_data*) array to do operations with. link:vkcomp.html[vkcomp(3)]
+* *cur_gpd*: Current graphics pipeline data. Selects which element in the (*struct _gp_data*) array to do operations with. link:vkcomp.html[vkcomp(3)]. The element being the address of the VkPipelineLayout object itself.
+* *layout_count*: A member of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineLayoutCreateInfo.html[VkPipelineLayoutCreateInfo] structure used to pass
+the number of https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayout.html[VkDescriptorSetLayouts] a particular graphics pipeline layout will contain. This predefines how to acess the shader and at what shader stage in the pipeline.
+* *VkDescriptorSetLayoutCreateInfo*: The structure that allows one to specify the type of descriptor, the graphics pipeline stage in which it will be needed, and the binding to associate the descriptor with the in shader variable.
+* *pushConstantRangeCount*: TODO
+* *VkPushConstantRange*: TODO
+* *flags*: Currently reserved for future usage
+
+== DESCRIPTION
+
+The *dlu_create_pipeline_layout(3)* creates a VkPipelineLayout object. This object is then later used by the graphics pipeline itself so that is knows what resources are need to produce the final image and at what shader stages.
+
+== RETURN VALUES
+
+Upon success or failure function returns one of Vulkans link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResult.html[VkResult]
+enum constants. These result codes are used to indicate return status information and runtime errors.
+
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:vkcomp.html[vkcomp(3)]
+link:dlu_create_graphics_pipelines.html[dlu_create_graphics_pipelines(3)]
+link:dlu_create_desc_set_layout.html[dlu_create_desc_set_layout(3)]
+link:dlu_create_desc_sets.html[dlu_create_desc_sets(3)]
+
+== AUTHOR
+
+Vincent Davis Jr.

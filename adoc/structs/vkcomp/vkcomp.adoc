@@ -156,13 +156,16 @@ N/A.
 
 link:dlu_init_vk.html[dlu_init_vk(3)]
 link:dlu_freeup_vk.html[dlu_freeup_vk(3)]
+link:dlu_set.html[dlu_set_*(3)]
 link:dlu_set_debug_message.html[dlu_set_debug_message(3)]
 link:dlu_set_device_debug_ext.html[dlu_set_device_debug_ext(3)]
 link:dlu_create_instance.html[dlu_create_instance(3)]
 link:dlu_create_physical_device.html[dlu_create_physical_device(3)]
-link:dlu_create_logical_device.html[dlu_create_logical_device(3)]
-link:dlu_create_queue_families.html[dlu_create_queue_families(3)]
+link:dlu_create_logical_device.html[dlu_create_logical_device(3)] link:dlu_create_queue_families.html[dlu_create_queue_families(3)]
 link:dlu_create_device_queue.html[dlu_create_device_queue(3)]
+link:dlu_create_vk_buffer.html[dlu_create_vk_buffer(3)]
+link:dlu_create_pipeline_layout.html[dlu_create_pipeline_layout(3)]
+link:dlu_vk_map_mem.html[dlu_vk_map_mem(3)]
 
 == Author
 

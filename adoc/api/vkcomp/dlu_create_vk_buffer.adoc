@@ -60,7 +60,8 @@ image::vulkan-memory.jpeg[Vulkan Memory, align="center"]
 The *dlu_create_vk_buffer(3)* function creates a VkBuffer object that is backed by a VkDeviceMemory object. This function queries a VkPhysicalDevice to check to see
 if the chosen *requirements_mask* is a good fit for the VkBuffer/VkDeviceMemory. This function also binds the entire VkDeviceMemory object to the entire VkBuffer object regardless
 of the size of a given VkBuffer. One can then use link:dlu_vk_map_mem.html[dlu_vk_map_mem(3)] which uses memcpy(3) to directly map data into the VkDeviceMemory object.
-Depending upon the set *requirements_mask* values link:dlu_vk_map_mem.html[dlu_vk_map_mem(3)] allowed usage may vary.
+Depending upon the set *requirements_mask* values, link:dlu_vk_map_mem.html[dlu_vk_map_mem(3)] allowed usage may vary. One can check [Vulkan GPU Info](https://vulkan.gpuinfo.org)
+for different memory configurations.
 
 == RETURN VALUES
 
