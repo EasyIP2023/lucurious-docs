@@ -31,7 +31,7 @@ VkResult dlu_create_desc_set_layout(
 * *cur_dd*: Current descriptor data. Selects which element in the (*struct _desc_data*) array to do operations with. link:vkcomp.html[vkcomp(3)]. The operation conducted is the creation of the VkDescriptorSetLayout object.
 
 * *cur_dl*: Current descriptor data. Selects which element in the (*struct _desc_data*) array to do operations with. link:vkcomp.html[vkcomp(3)]. The operation conducted is the creation of the VkDescriptorSetLayout object.
-* *VkDescriptorSetLayoutCreateInfo*: The passing argument *must* be the address of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateInfo.html[VkDescriptorSetLayoutCreateInfo] structure.
+* *desc_set_info*: The passing argument *must* be the address of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateInfo.html[VkDescriptorSetLayoutCreateInfo] structure.
 
 == DESCRIPTION
 
