@@ -164,8 +164,11 @@ link:dlu_create_physical_device.html[dlu_create_physical_device(3)]
 link:dlu_create_logical_device.html[dlu_create_logical_device(3)] link:dlu_create_queue_families.html[dlu_create_queue_families(3)]
 link:dlu_create_device_queue.html[dlu_create_device_queue(3)]
 link:dlu_create_vk_buffer.html[dlu_create_vk_buffer(3)]
-link:dlu_create_pipeline_layout.html[dlu_create_pipeline_layout(3)]
 link:dlu_vk_map_mem.html[dlu_vk_map_mem(3)]
+link:dlu_create_pipeline_layout.html[dlu_create_pipeline_layout(3)]
+link:dlu_create_desc_set_layout.html[dlu_create_desc_set_layout(3)]
+link:dlu_create_desc_pool.html[dlu_create_desc_pool(3)]
+link:dlu_create_desc_sets.html[dlu_create_desc_sets(3)]
 
 == Author
 

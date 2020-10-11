@@ -1,0 +1,55 @@
+:stylesheet: rubygems.css
+:stylesheet: asciidoctor.css
+:stylesheet: asciidoctor.min.css
+
+link:index.html[home]
+
+==  dlu_create_desc_sets(3)
+
+== BRIEF DESCRIPTION
+
+*dlu_create_desc_sets* - a wrapper function that creates the VkDescriptorSet object used by the shader to access vulkan resources (VkImage, VkBuffer, etc..)
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
+VkResult dlu_create_desc_sets(
+  vkcomp *app,
+  uint32_t cur_dd
+);
+----
+
+== PARAMETERS
+
+* *app*: A pointer to the link:vkcomp.html[vkcomp(3)] structure.
+* *cur_dd*: Current descriptor data. Selects which element in the (*struct _desc_data*) array to do operations with. link:vkcomp.html[vkcomp(3)]. The operation conducted is the allocation of the VkDescriptorSet objects.
+
+== DESCRIPTION
+
+The *dlu_create_desc_sets(3)* function will allocate VkDescriptorSet objects provided the VkDescriptorSetLayout's and a given VkDescriptorPool to allocate descriptor sets from. One will later need to associate a descriptor set with resources that the shader can acess via vulkan structures (i.e 
+link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorBufferInfo.html[VkDescriptorBufferInfo], link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorBufferInfo.html[VkDescriptorImageInfo]), then update corresponding descriptor sets via link:dlu_update_desc_sets.html[dlu_update_desc_sets(3)]. In the latter binding the sets to the render pipeline via link:dlu_bind_desc_sets.html[dlu_bind_desc_sets(3)]
+
+== RETURN VALUES
+
+Upon success or failure function returns one of Vulkans link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResult.html[VkResult]
+enum constants. These result codes are used to indicate return status information and runtime errors.
+
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:vkcomp.html[vkcomp(3)]
+link:dlu_create_desc_set_layout.html[dlu_create_desc_set_layout(3)]
+link:dlu_create_desc_pool.html[dlu_create_desc_pool(3)]
+link:dlu_update_desc_sets.html[dlu_update_desc_sets(3)]
+link:dlu_bind_desc_sets.html[dlu_bind_desc_sets(3)]
+
+== AUTHOR
+
+Vincent Davis Jr.

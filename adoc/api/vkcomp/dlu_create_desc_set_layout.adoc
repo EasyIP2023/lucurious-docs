@@ -35,8 +35,7 @@ VkResult dlu_create_desc_set_layout(
 
 == DESCRIPTION
 
-The *dlu_create_desc_set_layout(3)* function creates a VkDescriptorSetLayout object which will be later used when creating descriptor sets from a descriptor pool to define what the descriptors in a descriptor set will be utilized for. It also defines what type of descriptors are in the descriptor set, the binding that associate a descriptor with a given shader variable, and at what shader stage will each descriptor within a given descriptor set be utilized.
-
+The *dlu_create_desc_set_layout(3)* function creates a VkDescriptorSetLayout object which will be later used when allocating descriptor sets from a descriptor pool. The VkDescriptorSetLayout defines what the descriptors in a descriptor set will be utilized for. It also defines what type of descriptors are in the descriptor set, the binding that associate a descriptor with a given shader variable, and at what shader stage will each descriptor within a given descriptor set be utilized.
 
 == RETURN VALUES
 
