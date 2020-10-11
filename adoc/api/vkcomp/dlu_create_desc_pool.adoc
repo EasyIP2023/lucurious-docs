@@ -1,0 +1,60 @@
+:stylesheet: rubygems.css
+:stylesheet: asciidoctor.css
+:stylesheet: asciidoctor.min.css
+
+link:index.html[home]
+
+==  dlu_create_desc_pool(3)
+
+== BRIEF DESCRIPTION
+
+*dlu_create_desc_pool* - a wrapper function that creates the VkDescriptorPool object which pre-allocates reusable space for descriptors sets.
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
+VkResult dlu_create_desc_pool(
+  vkcomp *app,
+  uint32_t cur_ld,
+  uint32_t cur_dd,
+  uint32_t psize,
+  VkDescriptorPoolSize *pool_sizes,
+  VkDescriptorPoolCreateFlags flags
+);
+----
+
+== PARAMETERS
+
+* *app*: A pointer to the link:vkcomp.html[vkcomp(3)] structure.
+* *cur_ld*: Current logical device. Selects which element in the (*struct _ld_data*) array to do operations with. link:vkcomp.html[vkcomp(3)]
+* *cur_dd*: Current descriptor data. Selects which element in the (*struct _desc_data*) array to do operations with. link:vkcomp.html[vkcomp(3)]. The operation conducted is the creation of the VkDescriptorPool object.
+* *psize*: Defines the amount of elements in the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolSize.html[VkDescriptorPoolSize] structure array.
+* *pool_sizes*: The link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolSize.html[VkDescriptorPoolSize] structure is used to specify the number of descriptors of a given type. So that memory associated with that type can be pre-allocated. One *must* pass a VkDescriptorPoolSize structure array, with each element defining the type of descriptor and the amount of descriptors of that particular type. 
+* *flags*: A link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateFlagBits.html[VkDescriptorPoolCreateFlag] enum which define a bitmask specifying certain operations a given descriptor pool will support.
+
+== DESCRIPTION
+
+The *dlu_create_desc_pool(3)* function creates a VkDescriptorPool object that is used in the allocation and freeing of descriptor sets. Memory is allocated once then sub-allocated from the larger block.
+
+== RETURN VALUES
+
+Upon success or failure function returns one of Vulkans link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResult.html[VkResult]
+enum constants. These result codes are used to indicate return status information and runtime errors.
+
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:vkcomp.html[vkcomp(3)]
+link:dlu_create_desc_sets.html[dlu_create_desc_sets(3)]
+link:dlu_create_desc_set_layout.html[dlu_create_desc_set_layout(3)]
+
+== AUTHOR
+
+Vincent Davis Jr.
