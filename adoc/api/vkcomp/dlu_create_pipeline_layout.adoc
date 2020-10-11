@@ -45,6 +45,8 @@ the number of https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/h
 
 The *dlu_create_pipeline_layout(3)* creates a VkPipelineLayout object. This object is then later used by the graphics pipeline itself so that is knows what resources are need to produce the final image and at what shader stages.
 
+Internally the *dlu_create_pipeline_layout(3)* will create temporary VkDescriptorSetLayout objects to basically just copy in information used to create the VkDescriptorSetLayout object. 
+
 == RETURN VALUES
 
 Upon success or failure function returns one of Vulkans link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResult.html[VkResult]
@@ -60,6 +62,7 @@ link:vkcomp.html[vkcomp(3)]
 link:dlu_create_graphics_pipelines.html[dlu_create_graphics_pipelines(3)]
 link:dlu_create_desc_set_layout.html[dlu_create_desc_set_layout(3)]
 link:dlu_create_desc_sets.html[dlu_create_desc_sets(3)]
+link:dlu_create_desc_pool.html[dlu_create_desc_pool(3)]
 
 == AUTHOR
 

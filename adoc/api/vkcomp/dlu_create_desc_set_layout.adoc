@@ -1,0 +1,58 @@
+:stylesheet: rubygems.css
+:stylesheet: asciidoctor.css
+:stylesheet: asciidoctor.min.css
+
+link:index.html[home]
+
+==  dlu_create_desc_set_layout(3)
+
+== BRIEF DESCRIPTION
+
+*dlu_create_desc_set_layout* - a wrapper function that creates the VkDescriptorSetLayout object used mainly for definition.
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_VKCOMP_API
+#include <dluc/lucurious.h>
+
+VkResult dlu_create_desc_set_layout(
+  vkcomp *app,
+  uint32_t cur_dd,
+  uint32_t cur_dl,
+  VkDescriptorSetLayoutCreateInfo *desc_set_info
+);
+----
+
+== PARAMETERS
+
+* *app*: A pointer to the link:vkcomp.html[vkcomp(3)] structure.
+* *cur_dd*: Current descriptor data. Selects which element in the (*struct _desc_data*) array to do operations with. link:vkcomp.html[vkcomp(3)]. The operation conducted is the creation of the VkDescriptorSetLayout object.
+
+* *cur_dl*: Current descriptor data. Selects which element in the (*struct _desc_data*) array to do operations with. link:vkcomp.html[vkcomp(3)]. The operation conducted is the creation of the VkDescriptorSetLayout object.
+* *VkDescriptorSetLayoutCreateInfo*: The passing argument *must* be the address of the link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateInfo.html[VkDescriptorSetLayoutCreateInfo] structure.
+
+== DESCRIPTION
+
+The *dlu_create_desc_set_layout(3)* function creates a VkDescriptorSetLayout object which will be later used when creating descriptor sets from a descriptor pool to define what the descriptors in a descriptor set will be utilized for. It also defines what type of descriptors are in the descriptor set, the binding that associate a descriptor with a given shader variable, and at what shader stage will each descriptor within a given descriptor set be utilized.
+
+
+== RETURN VALUES
+
+Upon success or failure function returns one of Vulkans link:https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResult.html[VkResult]
+enum constants. These result codes are used to indicate return status information and runtime errors.
+
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:vkcomp.html[vkcomp(3)]
+link:dlu_create_desc_sets.html[dlu_create_desc_sets(3)]
+link:dlu_create_desc_pool.html[dlu_create_desc_pool(3)]
+
+== AUTHOR
+
+Vincent Davis Jr.
