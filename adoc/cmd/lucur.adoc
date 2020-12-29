@@ -42,7 +42,7 @@ allow developers to describe what a particular device does. It also enables the 
 === &nbsp;&nbsp;&nbsp;&nbsp;&mdash;display-info `<drm device>`
 
 This will display any compatible (DRM Device/KMS Node) and it's capabilities. Mainly used to limit allocations and instruction
-execution when calling link:dlu_drm_kms_node_enum_ouput_dev.html[dlu_drm_kms_node_enum_ouput_dev(3)]. If no
+execution when calling link:dlu_kms_enum_device.html[dlu_kms_enum_device(3)]. If no
 preferred DRM device available cycle through all devices and display Plane -> CTRC -> Encoder -> Connector pairs. The argument for this flag is optional
 
 === -v, &mdash;version

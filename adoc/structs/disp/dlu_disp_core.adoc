@@ -4,20 +4,20 @@
 
 link:index.html[home]
 
-== dlu_drm_core(3)
+== dlu_disp_core(3)
 
 == BRIEF DESCRIPTION
 
-*dlu_drm_core* - a structure that allows for easy and better tracking of handles to low-level linux graphics API objects.
+*dlu_disp_core* - a structure that allows for easy and better tracking of handles to low-level linux graphics API objects.
 
 == C SPECIFICATION
 
 [source,c]
 ----
-#define LUCUR_DRM_API
+#define LUCUR_DISPLAY_API
 #include <dluc/lucurious.h>
 
-typedef struct _dlu_drm_core {
+typedef struct _dlu_disp_core {
  
   uint32_t odbc;
   struct _drm_buff_data {
@@ -62,9 +62,9 @@ typedef struct _dlu_drm_core {
     drmModeConnector *conn;
 
     struct {
-      struct drm_prop_info plane[DLU_DRM_PLANE__CNT];
-      struct drm_prop_info crtc[DLU_DRM_CRTC__CNT];
-      struct drm_prop_info conn[DLU_DRM_CONNECTOR__CNT];
+      struct drm_prop_info plane[DLU_DISPLAY_PLANE__CNT];
+      struct drm_prop_info crtc[DLU_DISPLAY_CRTC__CNT];
+      struct drm_prop_info conn[DLU_DISPLAY_CONNECTOR__CNT];
     } props;
   } *output_data;
 
@@ -89,7 +89,7 @@ typedef struct _dlu_drm_core {
     struct udev *udev;
     struct libinput *inp;
   } input;
-} dlu_drm_core;
+} dlu_disp_core;
 ----
 
 == MEMBERS
@@ -102,8 +102,8 @@ typedef struct _dlu_drm_core {
 
 == SEE ALSO
 
-link:dlu_drm_init_core.html[dlu_drm_init_core(3)]
-link:dlu_drm_freeup_core.html[dlu_drm_freeup_core(3)]
+link:dlu_disp_init_core.html[dlu_disp_init_core(3)]
+link:dlu_disp_freeup_core.html[dlu_disp_freeup_core(3)]
 
 == Author
 

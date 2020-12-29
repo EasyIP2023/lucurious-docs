@@ -48,7 +48,7 @@ first building it, I figured it would make it easier to keep track of FD's and v
 * link:dlu_otma_mems.html[dlu_otma_mems(3)]
 
 === drm
-* link:dlu_drm_core.html[dlu_drm_core(3)]
+* link:dlu_disp_core.html[dlu_disp_core(3)]
 
 == Enums
 === vkcomp
@@ -85,5 +85,5 @@ first building it, I figured it would make it easier to keep track of FD's and v
 * link:dlu_release_blocks.html[dlu_release_blocks(3)]
 
 === drm
-* link:dlu_drm_init_core.html[dlu_drm_init_core(3)]
-* link:dlu_drm_freeup_core.html[dlu_drm_freeup_core(3)]
+* link:dlu_disp_init_core.html[dlu_disp_init_core(3)]
+* link:dlu_disp_freeup_core.html[dlu_disp_freeup_core(3)]

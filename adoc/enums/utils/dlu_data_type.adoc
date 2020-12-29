@@ -44,8 +44,8 @@ typedef enum _dlu_data_type {
 * *DLU_SC_DATA_MEMS*: select in vkcomp the members of the *(struct _sc_data)*. Important SwapChain Data members which are pointer to structures themselves or just pointers.
 * *DLU_DESC_DATA_MEMS*: select in vkcomp the members of the *(struct _desc_data)*. Important Descriptor Data members which are pointer to structures themselves or just pointers.
 * *DLU_GP_DATA_MEMS*: select in vkcomp the members of the *(struct _gp_data)*. Important Graphics Pipeline Data members which are pointer to structures themselves or just pointers.
-* *DLU_DEVICE_OUTPUT_DATA*: select in dlu_drm_core *(struct _output_data)*. Important DRM Device Output Data.
-* *DLU_DEVICE_OUTPUT_BUFF_DATA*: select in dlu_drm_core *(struct _drm_buff_data)*. Important buffers for DRM Device outputs. 
+* *DLU_DEVICE_OUTPUT_DATA*: select in dlu_disp_core *(struct _output_data)*. Important DRM Device Output Data.
+* *DLU_DEVICE_OUTPUT_BUFF_DATA*: select in dlu_disp_core *(struct _drm_buff_data)*. Important buffers for DRM Device outputs. 
 
 == DESCRIPTION
 
@@ -61,7 +61,7 @@ N/A.
 == SEE ALSO
 
 link:vkcomp.html[vkcomp(3)]
-link:dlu_drm_core.html[dlu_drm_core(3)]
+link:dlu_disp_core.html[dlu_disp_core(3)]
 link:dlu_otma_mems.html[dlu_otma_mems(3)]
 link:dlu_otba.html[dlu_otba(3)]
 

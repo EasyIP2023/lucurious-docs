@@ -1,0 +1,47 @@
+:stylesheet: rubygems.css
+:stylesheet: asciidoctor.css
+:stylesheet: asciidoctor.min.css
+
+link:index.html[home]
+
+== dlu_disp_init_core(3)
+
+== BRIEF DESCRIPTION
+
+**dlu_disp_init_core** - This will return a pointer to a dlu_disp_core structure.
+
+== C SPECIFICATION
+
+[source,c]
+----
+#define LUCUR_DISPLAY_API
+#include> <dluc/lucurious.h>
+
+dlu_disp_core *dlu_disp_init_core();
+----
+
+== PARAMETERS
+
+N/A.
+
+== DESCRIPTION
+
+This function returns a pointer of type link:dlu_disp_core.html[dlu_disp_core(3)] structure.
+
+== RETURN VALUES
+
+Upon failure dlu_disp_core returns **NULL**. Upon success an address to the starting member of the
+link:dlu_disp_core.html[dlu_disp_core(3)] structure.
+
+== BUGS
+
+N/A.
+
+== SEE ALSO
+
+link:dlu_disp_core.html[dlu_disp_core(3)]
+link:dlu_disp_freeup_core.html[dlu_disp_freeup_core(3)]
+
+== AUTHOR
+
+Vincent Davis Jr.
